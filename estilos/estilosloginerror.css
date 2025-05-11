@@ -1,0 +1,79 @@
+@font-face {
+    font-family:fuenteuno;
+    src: url(.\media\fuentes\LexendDeca-VariableFont_wght.ttf);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(215,254,255);
+    background: linear-gradient(90deg, rgba(215,254,255,1) 24%, rgba(252,211,255,1) 92%);
+}
+
+.login{
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    width: 20%;
+    box-shadow: 5px 5px 10px black;
+}
+.contenido{
+    display: flex;
+    flex-direction: column;
+    font-family:fuenteuno, sans-serif;
+}
+.contenido form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contenido h1{
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.contenido p{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenido input{
+    position: relative;
+    background: #f0f0f0;
+    border: none;
+    outline: none;
+    padding: 15px 10px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.contenido button{
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-weight:bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor:pointer;
+    background: rgb(215,254,255);
+    background: linear-gradient(90deg, rgba(215,254,255,1) 24%, rgba(252,211,255,1) 92%);
+}
+
+.contenido button:hover{
+    background: rgb(175,253,255);
+    background: linear-gradient(90deg, rgba(175,253,255,1) 21%, rgba(250,180,255,1) 87%);
+    font-size: large;
+}
+
+
+  
+
+

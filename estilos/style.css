@@ -1,0 +1,46 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+nav {
+  height: 100px;
+  line-height: 100px;
+
+}
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+  height: 100px;
+  line-height: 100px;
+}
+@media only screen and (min-width: 601px){
+  nav, nav i{
+      height: 100px;
+      line-height: 100px;
+      
+  }
+}
+.fondopastel{
+  background: rgb(215,254,255);
+  background: linear-gradient(90deg, rgba(215,254,255,1) 24%, rgba(252,211,255,1) 92%);
+}
+h3{
+  margin-top: 10%;
+}
+.espacio{
+  margin-bottom: 50px;
+}
+th{
+  text-align: center;
+}
+tbody{
+  font-size: small;
+}
