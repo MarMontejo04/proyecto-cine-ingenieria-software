@@ -930,8 +930,3 @@ VALUES
 (49, 3, '2025-05-21', '11:00:00', 'Inglés', TRUE, 'VIP', 'activa'),
 (54, 1, '2025-05-24', '11:00:00', 'Inglés', TRUE, 'VIP', 'activa'),
 (53, 10, '2025-05-23', '14:00:00', 'Español', FALSE, 'normal', 'activa');
-
-
-
-
-
