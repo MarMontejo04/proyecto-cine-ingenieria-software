@@ -1,4 +1,4 @@
-# Sistema de Gestión de Cine – Aplicación Web
+# Sistema de Gestión de Cine y Simulacion – Aplicación Web
 
 Aplicación completa para la gestión de funciones, boletos y salas de cine. Permite a los usuarios consultar la cartelera, reservar boletos y visualizar detalles de películas, mientras que los administradores pueden gestionar funciones, disponibilidad de asientos y configuración de salas.
 
