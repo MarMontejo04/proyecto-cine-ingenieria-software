@@ -1,16 +1,16 @@
 <?php
 
 //Hosting
-//$host_db = "sql205.infinityfree.com";
-//$user_db = "if0_37329534";
-//$pass_db = "tGF5kE8O37xE";
-//$db_name = "if0_37329534_carrito";
+$host_db = "sql105.infinityfree.com";
+$user_db = "if0_38942601";
+$pass_db = "gJSmyqHL5Y0";
+$db_name = "if0_37329534_carrito";
 
 //Local
-$host_db = "localhost";
-$user_db = "root";
-$pass_db = "Oswal2018";
-$db_name = "cine_VertigoDB";
+//$host_db = "localhost";
+//$user_db = "root";
+//$pass_db = "Oswal2018";
+//$db_name = "cine_VertigoDB";
 
 //Servidor
 //$host_db = "localhost";
