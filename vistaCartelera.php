@@ -1,5 +1,3 @@
-<!-- VISTA CARTELERA -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +8,17 @@
 </head>
 <body>
     <header>
-        <?php include "./estilos/header.php"; ?>
-
+        <div class="header">
+            <h1>Categorías</h1>
+            <h1>Promociones</h1>
+        </div>
+        <h1>Logotipo</h1>
+        <div class="botones">
+            <button>Tu cine</button>
+            <form method="POST"  action="Login.php">
+                <button type="submit">Login</button>
+            </form>
+        </div>
     </header>
 
     <div class="cabecera">
@@ -41,11 +48,20 @@
     <footer class="page-footer fondopastel">
     <div class="container">
       <div class="row">
-        
+        <div class="col l3 s12">
+          <h5 class="black-text">Redes Sociales</h5>
+          <ul>
+            <li><a class="black-text" href="https://github.com/MarMontejo04">GitHub</a></li>
+            <li><a class="black-text" href="https://www.facebook.com/?locale=es_LA">Facebook</a></li>
+            <li><a class="black-text" href="https://www.instagram.com/">Instagram</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="footer-copyright">
-     
+      <div class="container">
+      Made by <a class="blue-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
     </div>
   </footer>
 </body>

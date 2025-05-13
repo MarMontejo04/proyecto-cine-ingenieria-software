@@ -1,0 +1,30 @@
+
+
+.cuerpo{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    gap: 2rem;
+}
+
+.ECE{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 2%;
+    gap: 2rem;
+}
+
+.contenido{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.parteIzq,
+.centro,
+.parteDer {
+    flex: 1;             
+    max-width: 300px;     
+}
