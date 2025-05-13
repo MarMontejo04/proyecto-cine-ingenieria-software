@@ -11,6 +11,7 @@
 <body>
     <header>
         <?php include "./estilos/header.php"; ?>
+
     </header>
 
     <div class="cabecera">

@@ -1,47 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento</title>
-    <link rel="stylesheet" href="estilos/header.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Monoton&display=swap" rel="stylesheet">
+<!-- Dentro de .fila-header -->
+<div class="seccion-izquierda">
+    <button class="botonxd">CARTELERA</button>
+    <button class="botonxd">PROMOCIONES</button>
+</div>
 
+<div class="logo-central">
+    <img src="estilos/img/logo.jpg" alt="VERTIGO" class="logo-img">
+</div>
 
-</head>
-<body>
-    <header class="header">
-        <nav class="navegacion">
-            <div class="contenedor">
-                
+<div class="lado-derecho">
+    <select class="selectxd">
+        <option>Opciones</option>
+        <option>Perfil</option>
+        <option>Configuración</option>
+    </select>
 
-                <div>        
-                    <a href="#" class="logo">
-                        <img src="estilos/img/logo.jpg" alt="CARTELERA">
-                    </a>
-                </div>
-
-                <div>        
-                    <a href="#" class="logo">
-                        <img src="estilos/img/logo.jpg" alt="PROMOCIONES">
-                    </a>
-                </div>
-
-                <div class="titulo">
-                    <h1>VERTIGO</h1>
-                </div>
-
-                <div>
-                    <a href="#" class="logo">
-                        <img src="estilos/img/logo.jpg" alt="LOGO">
-                    </a>
-                </div>
-
-            </div>
-        </nav>
-    </header>
-</body>
-</html>
+    <button class="botonxd boton-perfil">
+        <img src="estilos/img/perfil-icono.svg" alt="perfil" width="24">
+        <div class="nombre-usuario">Dael</div>
+    </button>
+</div>
