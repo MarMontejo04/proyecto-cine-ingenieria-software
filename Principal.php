@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon">
 </head>
+
+<header>
+    <?php include "./estilos/header.php"; ?>
+</header>
+
 <body>
     <div class="navbar-fixed ">
         <nav class="fondopastel z-depth-2" role="navigation">

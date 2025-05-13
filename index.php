@@ -1,3 +1,5 @@
+<!-- VISTA CARTELERA -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +10,7 @@
 </head>
 <body>
     <header>
-        <div class="header">
-            <h1>Categorías</h1>
-            <h1>Promociones</h1>
-        </div>
-        <h1>Logotipo</h1>
-        <div class="botones">
-            <button>Tu cine</button>
-            <form method="POST"  action="./Login.php">
-                <button type="submit">Login</button>
-            </form>
-        </div>
+        <?php include "./estilos/header.php"; ?>
     </header>
 
     <div class="cabecera">

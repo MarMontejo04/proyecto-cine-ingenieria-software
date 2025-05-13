@@ -8,10 +8,9 @@
 </head>
 <body>
     <header>
-        <div class="header">
-            logotipo
-        </div>
+        <?php include "./estilos/header.php"; ?>
     </header>
+    
         <div class="contenido">
             <h1>Sign in</h1>
             <p>Correo incorrecto o contraseña incorrecta</p>

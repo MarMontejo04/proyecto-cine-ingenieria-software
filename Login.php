@@ -1,3 +1,5 @@
+<!-- vista iniciar sesion -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +10,9 @@
 </head>
 <body>
     <header>
-        <div class="header">
-            logotipo
-        </div>
+        <?php include "./estilos/header.php"; ?>
     </header>
+    
         <div class="contenido">
             <h1>Sign in</h1>
             <form method="POST"  action="./logica/loguear.php">

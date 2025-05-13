@@ -9,6 +9,11 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
+<header>
+    <?php include "./estilos/header.php"; ?>
+</header>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

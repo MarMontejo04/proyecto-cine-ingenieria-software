@@ -6,12 +6,13 @@
     <title>Sign in</title>
     <link rel="stylesheet" href="./estilos/estiloslogin.css">
 </head>
+
+
 <body>
     <header>
-        <div class="header">
-            logotipo
-        </div>
+        <?php include "./estilos/header.php"; ?>
     </header>
+
         <div class="contenido">
             <form method="POST" action="./logica/crearCuenta.php">
                 <input type="text" name="nombre" placeholder="Nombre(s)" required />
