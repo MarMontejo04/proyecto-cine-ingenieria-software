@@ -25,10 +25,6 @@
         <form method="POST"  action="./AdminEditar.php">
             <button type="submit">Editar</button>
         </form>
-        </form>
-        <form method="POST"  action="./index.php">
-            <button type="submit">Eliminar</button>
-        </form>
     </div>
 
     <div class="cuerpo">
