@@ -5,16 +5,26 @@ session_start();
 $email = $_POST['correo']; 
 $clave = $_POST['contrasena']; 
 
-$q = "SELECT contrasena FROM Usuarios WHERE correo = '$email'";
-$resultado = mysqli_query($conexion, $q);
+// Consulta para obtener la contraseña y el rol del usuario
+$q = "SELECT contrasena, tipo_usuario FROM Usuarios WHERE correo = ?";
+$stmt = mysqli_prepare($conexion, $q);
+mysqli_stmt_bind_param($stmt, "s", $email);
+mysqli_stmt_execute($stmt);
+$resultado = mysqli_stmt_get_result($stmt);
 
 if ($resultado && mysqli_num_rows($resultado) === 1) {
     $fila = mysqli_fetch_assoc($resultado);
     $hashGuardado = $fila['contrasena'];
+    $rol = $fila['tipo_usuario'];
 
     if (password_verify($clave, $hashGuardado)) {
-        $_SESSION['username'] = $email; 
-        header("Location: ../vistaCartelera.php");
+        $_SESSION['username'] = $email;
+
+        if ($rol === 'administrador') {
+            header("Location: ../Admin.php");
+        } else {
+            header("Location: ../vistaCartelera.php");
+        }
         exit;
     } else {
         header("Location: ../indexError.php");

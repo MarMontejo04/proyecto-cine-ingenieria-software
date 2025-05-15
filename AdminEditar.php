@@ -6,28 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdminAgregarPelicula</title>
-    <link rel="stylesheet" href="./estilos/estiloInicioCartelera.css">
+    <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./estilos/style.css" rel="stylesheet">
     <link rel="stylesheet" href="./estilos/estiloAgregar.css">
 
 </head>
 <body>
     <header>
-        <div class="header">
-        </div>
-        <h1>Logotipo</h1>
-        <div class="botones">
-            <button>Tu cine</button>
-            <form method="POST"  action="./index.php">
-                <button type="submit">Login</button>
-            </form>
-        </div>
+        <?php include "./estilos/header.php"; ?>
     </header>
-    <div class="ECE">
-        <form method="POST"  action="./Admin.php">
-            <button type="submit">Agregar</button>
-        </form>
-        </form>
 
+    <div class="ECE">
+        <h1>Admin</h1>
+
+        <form method="POST"  action="./Admin.php">
+            <button type="submit">Agregar Peliculas</button>
+        </form>
+        </form>
     </div>
 
     <h2>Lista de peliculas</h2>

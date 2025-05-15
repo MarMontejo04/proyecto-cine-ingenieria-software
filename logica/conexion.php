@@ -13,10 +13,10 @@ $db_name = "cine_VertigoDB";
 //$db_name = "cine_VertigoDB";
 
 //Local
-//$host_db = "localhost";
-//$user_db = "root";
-//$pass_db = "Oswal2018";
-//$db_name = "cine_VertigoDB";
+$host_db = "localhost";
+$user_db = "root";
+$pass_db = "Oswal2018";
+$db_name = "cine_VertigoDB";
 
 //Servidor
 //$host_db = "localhost";

@@ -502,4 +502,6 @@ INSERT INTO Usuarios (id_usuario, nombre, apellido_paterno, apellido_materno, co
 (2, 'Mariana', 'Montejo', 'Padilla', 'mariana@gmail.com', '5510283718', '2004-10-11', '$2y$10$enF2/nxSO/7.Fsx1YUr9/u0vC84izmkCfs.53nRVr2XU4i8pRxAzu', 'cliente'),
 (3, 'Alan', 'Otzar', 'NoMeAcuerdo', 'clasista@unam.fes.aragon.mx', '5552983718', '2004-05-15', '$2y$10$vPO92Thc9uEiidZ6JUe/P.QtzB56CgF6V6llOr4xGc8oFButSKnFW', 'cliente'),
 (4, 'Alejandro', 'Enrique', 'Ortega', 'ale120cm@gmail.com', '5519462872', '2005-07-10', '$2y$10$3mVrFuZ7XWrNHtCwW48njeIOXVPrRIsUc5yhaljHD0CcvYiH67x5G', 'cliente');
+(5, 'ADMIN', 'ADMIN', 'ADMIN', 'ADMIN@GMAIL', '1111111111', '1111-11-11', '$2y$10$8sF42eUgrPWnjdzBxYOOmeUtJSB7Wx.M.Frj99JxllSMGX1Nd2Rou', 'administrador');
+
 
