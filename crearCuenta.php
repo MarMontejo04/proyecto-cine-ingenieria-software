@@ -13,7 +13,7 @@
 <body>
     <header class="p-3 mb-3 gradient-custom">
         <div class="container">
-            <div class="d-flex align-item-center justify-content-center justify-content-xl-start">
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li>
                         <a class="nav-link px-2 text-white" href="./index.php">Cartelera</a>
@@ -26,8 +26,8 @@
                     </li>
                 </ul>
                 <a class="navbar-brand px-2 text-white" href="#">
-                    Vertigo Cine
-                    <img src="./media/fes-aragon.png" width="40" height="">
+                    VERTIGO FILMS
+                    <img src="./media/LOGOVERTIGO.PNG" width="70" height="70">
                 </a>
             </div>
         </div>
@@ -36,7 +36,7 @@
     <div class="row justify-content-md-center">
         <div class="col-md-5 col-lg-4">
             <div>
-                <h1 class="h1 text-center mb-3">Registrarse</h1>
+                <h1 class="h1 text-center mb-3 mt-3">Registrarse</h1>
             </div>
             <form method="POST" action="./logica/crearCuenta.php">
                 <div class="row g-3">
@@ -71,16 +71,20 @@
 
                     <button class="btn btn-lg text-white gradient-custom" type="submit">Registrarse</button>
                     <div class="text-center">
-                        <a class="link-opacity-25-hover mb-1" href="./Login.php">¿Tienes cuenta?</a>
+                        <p>¿Tienes cuenta? <a class="link-opacity-25-hover mb-1" href="./Login.php">Ingresa</a></p>
                     </div>
-
                 </div>
             </form>
         </div>
     </div>
 
-    </form>
-    </div>
+
+    <footer class="bd-footer py-4 py-md-5 mt-5 gradient-custom">
+        <div class="container py-4 py-md px-4 px-md-3 text-white">
+
+        </div>
+    </footer>
+
 </body>
 
 </html>
