@@ -1,5 +1,5 @@
-create DATABASE pagina_cine;
-use pagina_cine;
+create DATABASE cine_VertigoDB;
+use cine_VertigoDB;
 -- Tabla de usuarios
 CREATE TABLE Usuarios (
   id_usuario INT AUTO_INCREMENT PRIMARY KEY,

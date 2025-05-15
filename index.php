@@ -1,4 +1,5 @@
 <!-- VISTA CARTELERA -->
+<!-- SIN SESION INICIADA -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,15 +7,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
-    <link rel="stylesheet" href="./estilos/estiloInicioCartelera.css">
+    <!-- <link rel="stylesheet" href="./estilos/estiloInicioCartelera.css"> -->
 </head>
 <body>
+
     <header>
         <?php include "./estilos/header.php"; ?>
-
     </header>
 
-    <div class="cabecera">
+    <div>
         <div class="buscador">
             <input type="text" placeholder="Busca película">
         </div>
@@ -34,19 +35,13 @@
         </div>
     </div>
 
+    <!-- IMAGENES EN CARTELERA -->
     <div class="peliculas">
     <?php include("./logica/cartelera.php"); ?>
     </div>
 
-    <footer class="page-footer fondopastel">
-    <div class="container">
-      <div class="row">
-        
-      </div>
-    </div>
-    <div class="footer-copyright">
-     
-    </div>
-  </footer>
+    <footer>  
+        <?php include "./estilos/footer.php"; ?>
+    </footer>
 </body>
 </html>

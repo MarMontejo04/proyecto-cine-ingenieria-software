@@ -7,6 +7,7 @@
     <title>Registrate</title>
     <link href="./estilos/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
     <link href="./estilos/style.css" rel="stylesheet">
 </head>
 
@@ -33,6 +34,9 @@
                 <img src="./media/LOGOVERTIGO.PNG" width="70" height="70" class="ms-3">
             </div>
         </div>
+<body >
+    <header>
+        <?php include "./estilos/header.php"; ?>
     </header>
 
     <div class="row justify-content-md-center">
@@ -44,7 +48,7 @@
                 <div class="row g-3">
                     <div class="col-12">
                         <label for="nombre">Nombre(s)</label>
-                        <input type="text" class="form-control" name="nombre" required />
+                        <input type="text" class="form-control " name="nombre" required />
                     </div>
                     <div class="col-12">
                         <label for="apellido_paterno">Apellido Paterno</label>
@@ -99,6 +103,8 @@
                 </div>
             </div>
         </div>
+    <footer>  
+        <?php include "./estilos/footer.php"; ?>
     </footer>
 
 </body>
