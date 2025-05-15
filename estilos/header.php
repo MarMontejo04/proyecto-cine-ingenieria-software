@@ -26,10 +26,12 @@
                     </li>
                 </ul>
                 
-                <a class="navbar-brand px-2 text-white" href="./index.php">
-                    VERTIGO FILMS
-                    <img src="./media/LOGOVERTIGO.PNG" width="70" height="70">
-                </a>
+                <a class="navbar-brand px-2 text-center text-white d-block " href="#">
+                    <span class="d-block h4 mb-0 fw-bold">VÉRTIGO</span>
+                    <span class="d-block h5">FILMS</span>
+                    </a>
+                <img src="./media/LOGOVERTIGO.PNG" width="70" height="70" class="ms-3">
+            </div>
 
             </div>
         </div>

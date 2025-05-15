@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <title>Footer</title>
     <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./estilos/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
     <link href="./estilos/style.css" rel="stylesheet">
 
 </head>
 <body >
 
-<footer class="py-4 bg-dark text-white">
-    <div class="row container"> 
-        <div class="col-12 col-md"> 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24">
-                <title>Footer</title>
-            </svg> 
-        </div> 
+<footer class="py-4 bg-dark text-white p-4">
+    <div class="row container ">  
         
-        <div class="col-6 col-md">
-            <img src="./media/LOGOVERTIGO.PNG" width="70" height="70" class="opacity-50">
-            <a class="link-secondary text-decoration-none" href="#">VERTIGO-2025 ©</a>
-        </div>
+        <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+                    <img src="./media/LOGOVERTIGO.PNG" alt="Logo Vértigo" width="50" height="50">
+                    <span class="mb-3 mb-md-0">© 2025 Vértigo Films, Inc</span>
+                </div>
         
         <div class="col-6 col-md"> 
             <h5>Chikitin TEAM</h5> 
@@ -86,7 +85,42 @@
                     <a class="link-secondary text-decoration-none" href="#">Terminos</a>
                 </li> 
             </ul> 
+
+            
         </div> 
+
+        <div class="col-6 col-md"> 
+            <h5>Sobre nosotros</h5> 
+            <ul class="list-unstyled text-small"> 
+                <li>
+                    <a class="link-secondary text-decoration-none" href="#">Equipo</a>
+                </li> 
+                <li>
+                    <a class="link-secondary text-decoration-none" href="#">Localizacion</a>
+                </li> 
+                <li>
+                    <a class="link-secondary text-decoration-none" href="#">Privacidad</a>
+                </li> 
+                <li>
+                    <a class="link-secondary text-decoration-none" href="#">Terminos</a>
+                </li> 
+            </ul> 
+
+            
+        </div> 
+        <div class="col-6 col-md"> 
+            <div class="col-md-6 text-center text-md-end">
+                <a href="https://www.instagram.com" target="_blank" class="text-white text-center">
+                    <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" class="text-white">
+                    <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+                </a>
+
+            </div>
+        </div> 
+        
+        
     </div> 
 </footer>
 

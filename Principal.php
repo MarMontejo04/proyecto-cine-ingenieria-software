@@ -10,9 +10,9 @@
     <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon">
 </head>
 
-<header>
+<!-- <header>
     <?php include "./estilos/header.php"; ?>
-</header>
+</header> -->
 
 <body>
     <div class="navbar-fixed ">
