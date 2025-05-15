@@ -27,15 +27,15 @@
             <button type="submit">Agregar</button>
         </form>
         </form>
-        <form method="POST"  action="./index.php">
-            <button type="submit">Eliminar</button>
-        </form>
+
     </div>
 
     <h2>Lista de peliculas</h2>
     <div class="cuerpo">
         <?php
             require "./logica/conexion.php";
+
+
             $sql = "SELECT id_pelicula, titulo, descripcion, clasificacion, duracion, genero, poster_url FROM Pelicula";
             $resultado = $conexion->query($sql);
 
@@ -48,17 +48,24 @@
                 echo '<th>Duración</th>';
                 echo '<th>Género</th>';
                 echo '<th>Acción</th>';
+                echo '<th>Eliminar</th>';
+
                 echo '</tr></thead>';
                 echo '<tbody>';
 
                 while ($fila = $resultado->fetch_assoc()) {
                     echo '<tr>';
-                    echo '<td>' . htmlspecialchars($fila["titulo"]) . '</td>';
-                    echo '<td>' . htmlspecialchars($fila["descripcion"]) . '</td>';
-                    echo '<td>' . htmlspecialchars($fila["clasificacion"]) . '</td>';
-                    echo '<td>' . htmlspecialchars($fila["duracion"]) . '</td>';
-                    echo '<td>' . htmlspecialchars($fila["genero"]) . '</td>';
-                    echo '<td><button onclick="editarPelicula(' . $fila["id_pelicula"] . ')">Editar</button></td>';
+                    echo '<form method="POST" action="logica/actualizarPelicula.php">';
+                    echo '<input type="hidden" name="id_pelicula" value="' . $fila["id_pelicula"] . '">';
+                    echo '<td><input type="text" name="titulo" value="' . htmlspecialchars($fila["titulo"]) . '"></td>';
+                    echo '<td><input type="text" name="descripcion" value="' . htmlspecialchars($fila["descripcion"]) . '"></td>';
+                    echo '<td><input type="text" name="clasificacion" value="' . htmlspecialchars($fila["clasificacion"]) . '"></td>';
+                    echo '<td><input type="text" name="duracion" value="' . htmlspecialchars($fila["duracion"]) . '"></td>';
+                    echo '<td><input type="text" name="genero" value="' . htmlspecialchars($fila["genero"]) . '"></td>';
+                    echo '<td><button type="submit">Guardar</button></td>';
+                    echo '<td><button type="submit">Eliminar</button></td>';
+
+                    echo '</form>';
                     echo '</tr>';
                 }
 

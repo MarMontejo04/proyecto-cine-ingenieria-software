@@ -922,9 +922,6 @@ VALUES
 (54, 1, '2025-05-24', '11:00:00', 'Inglés', TRUE, 'VIP', 'activa'),
 (53, 10, '2025-05-23', '14:00:00', 'Español', FALSE, 'normal', 'activa');
 
-
-
-
 INSERT INTO Usuarios (id_usuario, nombre, apellido_paterno, apellido_materno, correo,telefono, fecha_de_nacimiento, contrasena, tipo_usuario) VALUES
 (1, 'Donovan Amaury', 'Alcantara', 'Cruz', 'mau@gmail.com', '5512345678', '2002-01-25', '$2y$10$f.WI0tmajCqYjLgeP3rWN.l2Kxt.38UbUeDt16UJw.9SIU65b3SLS', 'cliente'),
 (2, 'Mariana', 'Montejo', 'Padilla', 'mariana@gmail.com', '5510283718', '2004-10-11', '$2y$10$enF2/nxSO/7.Fsx1YUr9/u0vC84izmkCfs.53nRVr2XU4i8pRxAzu', 'cliente'),
