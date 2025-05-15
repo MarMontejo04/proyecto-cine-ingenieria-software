@@ -1,5 +1,11 @@
 <?php
 
+//local AlN
+$host_db = "localhost:3306";
+$user_db = "root";
+$pass_db = "ImpliedFiber356@";
+$db_name = "cine_VertigoDB";
+
 //Hosting
 //$host_db = "localhost";
 //$user_db = "root";

@@ -5,32 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrate</title>
-    <link href="./estilos/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT">
+    <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
     <link href="./estilos/style.css" rel="stylesheet">
 </head>
 
 
-<body>
-    <header class="p-3 mb-3 gradient-custom">
-        <div class="container">
-            <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li>
-                        <a class="nav-link px-2 text-white" href="./index.php">Cartelera</a>
-                    </li>
-                    <li>
-                        <a class="nav-link px-2 text-white" href="">|</a>
-                    </li>
-                    <li>
-                        <a class="nav-link px-2 text-white" href="">Promociones</a>
-                    </li>
-                </ul>
-                <a class="navbar-brand px-2 text-white" href="#">
-                    VERTIGO FILMS
-                    <img src="./media/LOGOVERTIGO.PNG" width="70" height="70">
-                </a>
-            </div>
-        </div>
+<body >
+    <header>
+        <?php include "./estilos/header.php"; ?>
     </header>
 
     <div class="row justify-content-md-center">
@@ -42,7 +24,7 @@
                 <div class="row g-3">
                     <div class="col-12">
                         <label for="nombre">Nombre(s)</label>
-                        <input type="text" class="form-control" name="nombre" required />
+                        <input type="text" class="form-control " name="nombre" required />
                     </div>
                     <div class="col-12">
                         <label for="apellido_paterno">Apellido Paterno</label>
@@ -79,10 +61,8 @@
     </div>
 
 
-    <footer class="bd-footer py-4 py-md-5 mt-5 gradient-custom">
-        <div class="container py-4 py-md px-4 px-md-3 text-white">
-
-        </div>
+    <footer>  
+        <?php include "./estilos/footer.php"; ?>
     </footer>
 
 </body>

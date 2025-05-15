@@ -1,13 +1,49 @@
 @font-face {
   font-family: 'Lexend Deca';
   src: url('../media/fuente/LexendDeca-VariableFont_wght.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
 }
-.gradient-custom{
-  background: #741A83;
-    background: linear-gradient(90deg, rgba(116, 26, 131, 1) 0%, rgba(153, 0, 106, 1) 100%);
+.gradient-custom {
+    /* Colores morados iniciales */
+    --purple1: #741A83;
+    --purple2: #99006A;
+    /* Colores verdes */
+    --green1: #741A83;
+    --green2: #741A83;
+    
+    background: linear-gradient(90deg, 
+        var(--purple1) 0%, 
+        var(--purple2) 50%, 
+        var(--green1) 100%);
+    background-size: 200% 200%;
+    animation: smoothGradient 12s ease infinite;
+}
+
+@keyframes smoothGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 body{
   font-family: 'Lexend Deca', sans-serif;
 }
+
+.fondo {
+    background-image: url('imgFondo/Fondo1.jpg'); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    
+
+}
+
+
