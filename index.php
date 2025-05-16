@@ -9,51 +9,53 @@
     <title>Sign in</title>
     <link rel="stylesheet" href="./estilos/estiloInicioCartelera.css">
 </head>
-<body>
+<body >
 
     <header>
         <?php include "./estilos/header.php"; ?>
     </header>
 
     <div>
-        <div class="container">
-            <div class="row"> 
-                <div class="col-md-4"s>
+
+        <div class = "container my-4" >
+
+            <div class="row g-4"> 
+                <div class="col-lg-3">
                     <input type="text" placeholder="Busca película">
                 </div>
 
-                <div class="col-md-4">
-                    <a href="Cartelera">Cartelera</a>
+                <div class="col-lg-3 col-md-6 text-end">
+                    <a href="Cartelera" class="fs-4 fw-bold text-decoration-none">Cartelera</a>
                 </div> 
-        
-                <div class="col-md-4">
-                    <a href="Horarios">Horarios</a>
+
+                <div class="col-lg-3 col-md-6 text-start">
+                    <a href="Horarios" class="fs-4 fw-bold text-decoration-none">Horarios</a>
                 </div>
-                
-                <div class="col-md-4">
-                    <a href="Horarios">Horarios</a>
-                </div>
-                
                 
             </div>
         </div>
 
-        <div>
-            <label for="opciones">Cine:</label>
-                <select id="opciones" name="opciones">
-                    <option value="opcion1">Opción 1</option>
-                    <option value="opcion2">Opción 2</option>
-                    <option value="opcion3">Opción 3</option>
+        <div class="d-flex justify-content-center my-5">
+            <div class="w-25">
+                <label for="opciones" class="form-label d-flex align-items-center justify-content-center gap-2 mb-3">
+                <i class="bi bi-geo-alt-fill text-dark opacity-75"></i>
+                <span class="fw-semibold text-dark">Cine:</span>
+                </label>
+                
+                <select id="opciones" name="opciones" class="form-select border-0 shadow-sm">
+                    <option value="opcion1">Cine 1</option>
+                    <option value="opcion2">Cine 2</option>
+                    <option value="opcion3">Cine 3</option>
+                    <option value="opcion1">Cine 1</option>            
                 </select>
+            </div>
         </div>
 
 
     </div>
 
-
-    <!-- IMAGENES EN CARTELERA -->
     <div class="peliculas">
-    <?php include("./logica/cartelera.php"); ?>
+        <?php include("./logica/cartelera.php"); ?>
     </div>
 
     <footer>  
