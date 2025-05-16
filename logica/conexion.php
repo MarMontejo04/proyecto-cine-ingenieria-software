@@ -1,10 +1,10 @@
 <?php
 
 //local AlN
-$host_db = "localhost:3306";
-$user_db = "root";
-$pass_db = "ImpliedFiber356@";
-$db_name = "cine_VertigoDB";
+//$host_db = "localhost:3306";
+//$user_db = "root";
+//$pass_db = "ImpliedFiber356@";
+//$db_name = "cine_VertigoDB";
 
 //Hosting
 //$host_db = "localhost";
@@ -13,10 +13,10 @@ $db_name = "cine_VertigoDB";
 //$db_name = "cine_VertigoDB";
 
 //Local
-$host_db = "localhost";
-$user_db = "root";
-$pass_db = "Oswal2018";
-$db_name = "cine_VertigoDB";
+//$host_db = "localhost";
+//$user_db = "root";
+//$pass_db = "Oswal2018";
+//$db_name = "cine_VertigoDB";
 
 //Servidor
 //$host_db = "localhost";
@@ -24,10 +24,10 @@ $db_name = "cine_VertigoDB";
 //$pass_db = "123456789";
 //$db_name = "carrito";
 
-//$host_db = "localhost";
-//$user_db = "root";
-//$pass_db = "halo";
-//$db_name = "pagina_cine";
+$host_db = "localhost";
+$user_db = "root";
+$pass_db = "halo";
+$db_name = "pagina_cine";
 
 
 $conexion = new mysqli($host_db,$user_db,$pass_db,$db_name);
