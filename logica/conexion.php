@@ -14,7 +14,7 @@
 //Hosting
 $host_db = "localhost";
 $user_db = "root";
-$pass_db = "Oswal2018";
+$pass_db = "halo";
 $db_name = "cine_VertigoDB";
 
 //Servidor

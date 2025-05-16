@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -13,11 +13,19 @@
         <?php include "./estilos/header.php"; ?>
     </header>
 
-    <div class="ECE text-center my-4">
-        <h1>Administrador de Cines</h1>
-    </div>
+    <div class="container-fluid mt-4">
+        <div class="text-center mb-4">
+            <h1>Administrador de Cines</h1>
+            <div class="d-flex justify-content-center gap-3">
+                <form method="GET" action="./Admin.php">
+                    <button type="submit" class="btn btn-primary">Agregar Películas</button>
+                </form>
+                <form method="GET" action="./AdminEditar.php">
+                    <button type="submit" class="btn btn-secondary">Editar Películas</button>
+                </form>
+            </div>
+        </div>
 
-    <div class="container mt-4">
         <?php if (isset($_GET['mensaje']) && $_GET['mensaje'] === 'ok'): ?>
             <div class="alert alert-success" role="alert">
                 ¡Cine actualizado correctamente!
@@ -33,7 +41,7 @@
         $resultado = $conexion->query($sql);
 
         if ($resultado->num_rows > 0) {
-            echo '<div class="table-responsive">';
+            echo '<div class="table-responsive" style="min-width: 1000px;">';
             echo '<table class="table table-bordered table-striped">';
             echo '<thead class="table-dark">';
             echo '<tr>';
