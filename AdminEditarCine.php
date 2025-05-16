@@ -47,7 +47,7 @@
 
             while ($fila = $resultado->fetch_assoc()) {
                 echo '<tr>';
-                echo '<form method="POST" action="logica/actualizarCine.php">';
+                echo '<form method="POST" action="logica/ActualizarCine.php">';
                 echo '<input type="hidden" name="id_cine" value="' . $fila["id_cine"] . '">';
                 echo '<td><input class="form-control" type="text" name="nombre" value="' . htmlspecialchars($fila["nombre"]) . '"></td>';
                 echo '<td><input class="form-control" type="text" name="ubicacion" value="' . htmlspecialchars($fila["ubicacion"]) . '"></td>';

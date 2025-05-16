@@ -14,11 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt->bind_param("sssi", $nombre, $ubicacion, $gerente, $id);
 
-    if (!$stmt->execute()) {
-        die("Error en execute: " . $stmt->error);
-    } else {
+    if ($stmt->execute()) {
         header("Location: ../AdminEditarCine.php?mensaje=ok");
         exit;
+    } else {
+        echo "<p>Error al actualizar la película.</p>";
     }
 
     $stmt->close();
