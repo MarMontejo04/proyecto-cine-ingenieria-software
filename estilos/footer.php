@@ -110,7 +110,7 @@
         </div> 
         <div class="col-6 col-md"> 
             <div class="col-md-6 text-center text-md-end">
-                <a href="https://www.instagram.com" target="_blank" class="text-white text-center">
+                <a href="https://www.instagram.com" target="_blank" class="text-white text-centers">
                     <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
                 </a>
                 <a href="https://www.facebook.com" target="_blank" class="text-white">
