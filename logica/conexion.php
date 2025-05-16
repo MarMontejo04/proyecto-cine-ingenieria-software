@@ -27,7 +27,7 @@
 $host_db = "localhost";
 $user_db = "root";
 $pass_db = "halo";
-$db_name = "pagina_cine";
+$db_name = "cine_VertigoDB";
 
 
 $conexion = new mysqli($host_db,$user_db,$pass_db,$db_name);

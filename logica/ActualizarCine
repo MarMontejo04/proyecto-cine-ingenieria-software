@@ -8,13 +8,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gerente = $_POST["gerente"];
 
     $stmt = $conexion->prepare("UPDATE Cine SET nombre = ?, ubicacion = ?, gerente = ? WHERE id_cine = ?");
+    if (!$stmt) {
+        die("Error en prepare: " . $conexion->error);
+    }
+
     $stmt->bind_param("sssi", $nombre, $ubicacion, $gerente, $id);
 
-    if ($stmt->execute()) {
-        header("Location: ../AdminEditarCine.php?mensaje=actualizado");
-        exit;
+    if (!$stmt->execute()) {
+        die("Error en execute: " . $stmt->error);
     } else {
-        echo "<p>Error al actualizar el cine.</p>";
+        header("Location: ../AdminEditarCine.php?mensaje=ok");
+        exit;
     }
 
     $stmt->close();
