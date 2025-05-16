@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdminAgregarCine</title>
+    <title>AdminEditarCine</title>
     <link rel="stylesheet" href="./estilos/estiloInicioCartelera.css">
     <link rel="stylesheet" href="./estilos/estiloAgregar.css">
 </head>
@@ -19,10 +19,9 @@
         </div>
     </header>
 
+    <!-- Aquí se eliminó el botón Agregar -->
+
     <div class="ECE">
-        <form method="POST" action="./Admin.php">
-            <button type="submit">Agregar</button>
-        </form>
         <form method="POST" action="./index.php">
             <button type="submit">Eliminar</button>
         </form>
@@ -66,7 +65,6 @@
 
     <script>
         function editarCine(id) {
-            // Puedes redirigir a un formulario de edición, por ejemplo:
             window.location.href = "./AdminEditarCine.php?id=" + id;
         }
     </script>
