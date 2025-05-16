@@ -22,4 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
     $conexion->close();
 }
+if ($_POST["accion"] === "guardar") {
+    // después de actualizar correctamente:
+    header("Location: ../AdminAgregarPelicula.php?mensaje=actualizado");
+} elseif ($_POST["accion"] === "eliminar") {
+    // después de eliminar correctamente:
+    header("Location: ../AdminAgregarPelicula.php?mensaje=eliminado");
+}
+
+
 ?>

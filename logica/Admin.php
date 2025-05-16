@@ -27,4 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $conexion->close();
 }
+// después de agregar correctamente la película en la base de datos
+header("Location: ../AdminAgregarPelicula.php?mensaje=ok");
+exit();
+
+
 ?>
