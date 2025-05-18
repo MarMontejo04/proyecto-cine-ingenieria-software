@@ -8,17 +8,17 @@
 
 //LOCAL (SOLO COMPUTADORA DE ALAN (NO LAS BORREN xd))
 
-$host_db = "localhost:3306";
-$user_db = "root";
-$pass_db = "ImpliedFiber356@";
-$db_name = "cine_VertigoDB";
+//$host_db = "localhost:3306";
+//$user_db = "root";
+//$pass_db = "ImpliedFiber356@";
+//$db_name = "cine_VertigoDB";
 
 
 //Hosting
-// $host_db = "localhost";
-// $user_db = "root";
-// $pass_db = "halo";
-// $db_name = "cine_VertigoDB";
+ $host_db = "localhost";
+ $user_db = "root";
+ $pass_db = "halo";
+ $db_name = "cine_VertigoDB";
 
 //Servidor
 //$host_db = "localhost";
