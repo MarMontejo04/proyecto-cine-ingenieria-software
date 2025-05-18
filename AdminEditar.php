@@ -23,6 +23,9 @@
                 <form method="GET" action="./AdminEditarCine.php">
                     <button type="submit" class="btn btn-secondary">Editar Cines</button>
                 </form>
+                <form method="GET" action="./Vistas/VistasAdmin/Funciones.php">
+                    <button type="submit" class="btn btn-secondary">Editar Funciones</button>
+                </form>
             </div>
         </div>
 

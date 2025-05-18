@@ -7,9 +7,9 @@
 // $db_name = "if0_38942601_cine_VertigoDB";
 
 //local Alan
-$host_db = "localhost:3306";
+$host_db = "localhost";
 $user_db = "root";
-$pass_db = "ImpliedFiber356@";
+$pass_db = "Oswal2018";
 $db_name = "cine_VertigoDB";
 
 //Hosting

@@ -1,7 +1,7 @@
 <?php
 require 'conexion.php';
 
-$sql = "SELECT titulo, genero, poster_url FROM Pelicula";
+$sql = "SELECT id_pelicula, titulo, genero, poster_url FROM Pelicula";
 $resultado = $conexion->query($sql);
 ?>
 
@@ -15,7 +15,10 @@ $resultado = $conexion->query($sql);
                 echo '      <img src="' . htmlspecialchars($fila["poster_url"]) . '" alt="' . htmlspecialchars($fila["titulo"]) . '" class="img-fluid mb-2 rounded">';
                 echo '      <h5 class="mb-1">' . htmlspecialchars($fila["titulo"]) . '</h5>';
                 echo '      <span class="text-muted mb-2 d-block">' . htmlspecialchars($fila["genero"]) . '</span>';
-                echo '      <button class="btn rounded-pill text-white gradient-custom">Comprar</button>';
+                echo '      <form action="ComprarBoletoA.php" method="GET">';
+                echo '      <input type="hidden" name="pelicula_id" value="'.$fila["id_pelicula"].'">';
+                echo '               <button type="submit" class="btn btn-dark w-100">Comprar</button>';
+                echo '          </form>';
                 echo '  </div>';
                 echo '</div>';
             }

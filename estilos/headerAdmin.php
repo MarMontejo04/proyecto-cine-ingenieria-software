@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Header</title>
-    <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./estilos/style.css" rel="stylesheet">
+    <link href="../../estilos/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../estilos/style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -30,7 +30,7 @@
                     <span class="d-block h4 mb-0 fw-bold">VÉRTIGO</span>
                     <span class="d-block h5">FILMS</span>
                     </a>
-                <img src="./media/LOGOVERTIGO.PNG" width="70" height="70" class="ms-3">
+                <img src="../media/LOGOVERTIGO.PNG" width="70" height="70" class="ms-3">
             </div>
 
             </div>
