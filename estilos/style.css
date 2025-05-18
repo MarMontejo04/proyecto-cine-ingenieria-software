@@ -18,6 +18,20 @@
     animation: smoothGradient 10s ease infinite;
 }
 
+.gradient-custom2 {
+    --purple1: #3d3d3d;
+    --purple2: #3a44f8;
+    --green1: #3d3d3d;
+    --green2: #3d3d3d;
+    
+    background: linear-gradient(90deg, 
+        var(--purple1) 0%, 
+        var(--purple2) 50%, 
+        var(--green1) 100%);
+    background-size: 200% 200%;
+    animation: smoothGradient 10s ease infinite;
+}
+
 @keyframes smoothGradient {
     0% {
         background-position: 0% 50%;
