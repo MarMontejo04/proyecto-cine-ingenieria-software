@@ -12,24 +12,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $conexion->prepare("INSERT INTO Pelicula (titulo, descripcion, clasificacion, duracion, genero, poster_url) 
                             VALUES (?, ?, ?, ?, ?, ?)");
 
-    if ($stmt) {
-        $stmt->bind_param("sssiss", $titulo, $descripcion, $clasificacion, $duracion, $genero, $poster_url);
-        if ($stmt->execute()) {
-            header("Location: Admin.php?agregado=1");
-            exit;
-        } else {
-            $error = "❌ Error al ejecutar: " . $stmt->error;
-        }
-        $stmt->close();
+    $stmt->bind_param("sssiss", $titulo, $descripcion, $clasificacion, $duracion, $genero, $poster_url);
+
+    if ($stmt->execute()) {
+        header("Location: ../Admin.php?mensaje=ok");
+        exit;
     } else {
-        $error = "❌ Error al preparar la consulta: " . $conexion->error;
+        echo "<p>Error al agregar la película.</p>";
     }
 
+    $stmt->close();
     $conexion->close();
 }
-// después de agregar correctamente la película en la base de datos
-header("Location: ../AdminAgregarPelicula.php?mensaje=ok");
-exit();
-
-
 ?>

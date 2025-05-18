@@ -27,12 +27,14 @@
             </form>
         </div>
 
-        <?php if (isset($_GET['mensaje']) && $_GET['mensaje'] === 'ok'): ?>
-            <div class="alert alert-success" role="alert">
-                ¡Película agregada correctamente!
-            </div>
-        <?php endif; ?>
+
     </div>
+
+    <?php if (isset($_GET['mensaje']) && $_GET['mensaje'] === 'ok'): ?>
+        <div class="alert alert-success" role="alert">
+            ¡Película agregada correctamente!
+        </div>
+    <?php endif; ?>    
 
     <div class="cuerpo">
         <form action="./logica/Admin.php" method="POST">
