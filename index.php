@@ -1,5 +1,3 @@
-<!-- VISTA CARTELERA -->
-<!-- SIN SESION INICIADA -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,24 +35,46 @@
             </div>
         </div>
 
-        <div class="d-flex justify-content-center my-5">
-            <div class="w-25">
-                <label for="opciones" class="form-label d-flex align-items-center justify-content-center gap-2 mb-3">
-                <i class="bi bi-geo-alt-fill text-dark opacity-75"></i>
-                <span class="fw-semibold text-dark">Cine:</span>
-                </label>
-                
-                <select id="opciones" name="opciones" class="form-select border-0 shadow-sm">
-                    <option value="opcion1">Cine 1</option>
-                    <option value="opcion2">Cine 2</option>
-                    <option value="opcion3">Cine 3</option>
-                    <option value="opcion1">Cine 1</option>            
-                </select>
-            </div>
-        </div>
-
-
     </div>
+
+    <div class="modal fade" id="modalFunciones" tabindex="-1" aria-labelledby="modalFuncionesLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modalFuncionesLabel">Funciones disponibles</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="funcionesContenido">
+            Cargando funciones...
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.ver-funciones').forEach(button => {
+            button.addEventListener('click', function () {
+                const idPelicula = this.dataset.id;
+                const idCine = this.dataset.cine;
+
+                fetch(`./logica/obtener_funciones.php?id_pelicula=${idPelicula}&id_cine=${idCine}`)
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('funcionesContenido').innerHTML = html;
+                        const modal = new bootstrap.Modal(document.getElementById('modalFunciones'));
+                        modal.show();
+                    })
+                    .catch(err => {
+                        document.getElementById('funcionesContenido').innerHTML = 'Error al cargar funciones.';
+                    });
+            });
+        });
+    });
+    </script>
+
+
 
     <div class="peliculas">
         <?php include("./logica/cartelera.php"); ?>

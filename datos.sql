@@ -464,7 +464,7 @@ VALUES
 (5, 2, '2025-05-23', '05:00:00', 'Francés', FALSE, 'VIP', 'activa'),
 (7, 5, '2025-05-23', '14:00:00', 'Español', FALSE, 'Tradicional', 'activa'),
 (5, 4, '2025-05-23', '23:00:00', 'Inglés', TRUE, 'VIP', 'activa'),
-(9, 9, '2025-05-23', '14:00:00', 'Francés', FALSE, 'Tradicional'), 
+(9, 9, '2025-05-23', '14:00:00', 'Francés', FALSE, 'Tradicional', 'activa'), 
 (7, 4, '2025-05-28', '20:00:00', 'Inglés', TRUE, 'VIP', 'activa'),
 (14, 1, '2025-05-22', '02:00:00', 'Español', FALSE, 'Tradicional', 'activa'),
 (9, 1, '2025-05-23', '14:00:00', 'Español', TRUE, 'Tradicional', 'activa'),
