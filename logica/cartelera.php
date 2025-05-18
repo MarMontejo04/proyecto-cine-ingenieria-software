@@ -68,7 +68,7 @@ $resultado = $conexion->query($sql);
                                 data-id="' . $fila['id_pelicula'] . '" 
                                 data-cine="' . $id_cine_seleccionado . '"
                             >
-                                Comprar
+                                Seleccionar
                             </button>';
                 echo '  </div>';
                 echo '</div>';

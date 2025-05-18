@@ -60,8 +60,8 @@
                     echo '<th>Clasificación</th>';
                     echo '<th>Duración</th>';
                     echo '<th>Género</th>';
+                    echo '<th>Imagen</th>';
                     echo '<th>Guardar</th>';
-                    echo '<th>Eliminar</th>';
                     echo '</tr></thead>';
                     echo '<tbody>';
 
@@ -74,8 +74,8 @@
                         echo '<td><input class="form-control" type="text" name="clasificacion" value="' . htmlspecialchars($fila["clasificacion"]) . '"></td>';
                         echo '<td><input class="form-control" type="text" name="duracion" value="' . htmlspecialchars($fila["duracion"]) . '"></td>';
                         echo '<td><input class="form-control" type="text" name="genero" value="' . htmlspecialchars($fila["genero"]) . '"></td>';
+                        echo '<td><input class="form-control" type="text" name="poster_url" value="' . htmlspecialchars($fila["poster_url"]) . '"></td>';
                         echo '<td><button type="submit" name="accion" value="guardar" class="btn btn-success">Guardar</button></td>';
-                        echo '<td><button type="submit" name="accion" value="eliminar" class="btn btn-danger">Eliminar</button></td>';
                         echo '</form>';
                         echo '</tr>';
                     }

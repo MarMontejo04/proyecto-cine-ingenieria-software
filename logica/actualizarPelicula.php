@@ -8,9 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $clasificacion = $_POST["clasificacion"];
     $duracion = $_POST["duracion"];
     $genero = $_POST["genero"];
+    $poster_url = $_POST["poster_url"];
 
-    $stmt = $conexion->prepare("UPDATE Pelicula SET titulo = ?, descripcion = ?, clasificacion = ?, duracion = ?, genero = ? WHERE id_pelicula = ?");
-    $stmt->bind_param("sssssi", $titulo, $descripcion, $clasificacion, $duracion, $genero, $id);
+    $stmt = $conexion->prepare("UPDATE Pelicula SET titulo = ?, descripcion = ?, clasificacion = ?, duracion = ?, genero = ?, poster_url = ? WHERE id_pelicula = ?");
+    $stmt->bind_param("ssssssi", $titulo, $descripcion, $clasificacion, $duracion, $genero, $poster_url, $id);
 
     if ($stmt->execute()) {
         header("Location: ../AdminEditar.php?mensaje=ok");
