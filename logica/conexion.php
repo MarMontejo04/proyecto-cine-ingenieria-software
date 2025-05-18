@@ -1,22 +1,16 @@
 <?php
 
-//Servidor
-$host_db = "sql105.infinityfree.com";
-$user_db = "if0_38942601";
-$pass_db = "gJSmyqHL5Y0";
-$db_name = "if0_38942601_cine_VertigoDB";
+//Servidor Infinityfree
+// $host_db = "sql105.infinityfree.com";
+// $user_db = "if0_38942601";
+// $pass_db = "gJSmyqHL5Y0";
+// $db_name = "if0_38942601_cine_VertigoDB";
 
 //local Alan
-//$host_db = "localhost:3306";
-//$user_db = "root";
-//$pass_db = "ImpliedFiber356@";
-//$db_name = "cine_VertigoDB";
-
-//local AlN
-//$host_db = "localhost:3306";
-//$user_db = "root";
-//$pass_db = "ImpliedFiber356@";
-//$db_name = "cine_VertigoDB";
+$host_db = "localhost";
+$user_db = "root";
+$pass_db = "Oswal2018";
+$db_name = "cine_VertigoDB";
 
 //Hosting
 // $host_db = "localhost";
