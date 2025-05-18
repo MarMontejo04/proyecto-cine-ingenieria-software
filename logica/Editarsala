@@ -1,0 +1,22 @@
+<?php
+require 'conexion.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id_sala = $_POST["id_sala"];
+    $nombre = $_POST["nombre"];
+    $tipo = $_POST["tipo"];
+
+    $stmt = $conexion->prepare("UPDATE Sala SET nombre = ?, tipo = ? WHERE id_sala = ?");
+    $stmt->bind_param("ssi", $nombre, $tipo, $id_sala);
+
+    if ($stmt->execute()) {
+        header("Location: ../Vistas/VistasAdmin/EditarSalas.php?mensaje=ok");
+        exit;
+    } else {
+        echo "<p>Error al actualizar la sala: " . $stmt->error . "</p>";
+    }
+
+    $stmt->close();
+    $conexion->close();
+}
+?>
