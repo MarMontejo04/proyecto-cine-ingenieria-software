@@ -11,7 +11,6 @@
 <body>
     <header>
         <?php include "../../estilos/headerAdmin.php"; ?>
-        
     </header>
 
     <div class="ECE text-center my-4">

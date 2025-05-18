@@ -10,6 +10,8 @@ $pass_db = "Oswal2018";
 $db_name = "cine_VertigoDB";
 
 
+
+
 $conexion = new mysqli($host_db,$user_db,$pass_db,$db_name);
 
 if($conexion->connect_error){

@@ -27,11 +27,11 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 text-end">
-                    <a href="Cartelera" class="fs-4 fw-bold text-decoration-none">Cartelera</a>
+                    <a href="vistaCartelera.php" class="fs-4 fw-bold text-decoration-none">Cartelera</a>
                 </div> 
 
                 <div class="col-lg-3 col-md-6 text-start">
-                    <a href="Horarios" class="fs-4 fw-bold text-decoration-none">Horarios</a>
+                    <a href="vistaHorarios.php" class="fs-4 fw-bold text-decoration-none">Horarios</a>
                 </div>
                 
             </div>

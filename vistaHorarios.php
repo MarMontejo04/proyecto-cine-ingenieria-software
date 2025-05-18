@@ -52,7 +52,7 @@
 
     </div>
         <div class="peliculas">
-        <?php include("./logica/cartelera.php"); ?>
+        <?php include("./logica/Horarios.php"); ?>
     </div>
 
     <footer>  
