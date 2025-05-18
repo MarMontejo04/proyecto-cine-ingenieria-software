@@ -10,17 +10,9 @@
 </head>
 <body>
     <header>
-        <div class="header">
-
-        </div>
-        <h1>Logotipo</h1>
-        <div class="botones">
-            <button>Tu cine</button>
-            <form method="POST"  action="./index.php">
-                <button type="submit">Login</button>
-            </form>
-        </div>
+        <?php include "./estilos/header2.php"; ?>
     </header>
+    
     <div class="ECE">
         <form method="POST"  action="./index.php">
             <button type="submit">Editar</button>

@@ -7,6 +7,8 @@
     <title>Inicia Sesion</title>
     <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
     <link href="./estilos/style.css" rel="stylesheet">
+    <link href="./estilos/style.css" rel="stylesheet">
+
 </head>
 
 <body class="fondo text-white h-100">
@@ -28,8 +30,8 @@
                     </div>
                     
                     <div class="col-12">
-                        <label for="contrasena">Contraseña</label>
-                        <input type="password" class="form-control w-100" name="contrasena" required />
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" class="form-control w-100" name="contraseña" required />
                     </div>
 
                     <div class="col-12">

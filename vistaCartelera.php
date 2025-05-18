@@ -5,54 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
     <link rel="stylesheet" href="./estilos/estiloInicioCartelera.css">
+    <link href="./estilos/style.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <?php include "./estilos/header.php"; ?>
+        <?php include "./estilos/header2.php"; ?>
     </header>
 
-    <div class="cabecera">
-        <div class="buscador">
-            <input type="text" placeholder="Busca película">
-        </div>
-        <div class="medio">
-            <div class="superior">
-                <h2>Cartelera</h2>
-                <h2>Horarios</h2>
+    <div>
+
+        <div class = "container my-4" >
+
+            <div class="row g-4"> 
+                <div class="col-lg-3">
+                    <input type="text" placeholder="Busca película">
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-end">
+                    <a href="Cartelera" class="fs-4 fw-bold text-decoration-none">Cartelera</a>
+                </div> 
+
+                <div class="col-lg-3 col-md-6 text-start">
+                    <a href="Horarios" class="fs-4 fw-bold text-decoration-none">Horarios</a>
+                </div>
+                
             </div>
-            <div class="inferior">
-                <label for="opciones">Cine:</label>
-                <select id="opciones" name="opciones">
-                    <option value="opcion1">Opción 1</option>
-                    <option value="opcion2">Opción 2</option>
-                    <option value="opcion3">Opción 3</option>
+        </div>
+
+        <div class="d-flex justify-content-center my-5">
+            <div class="w-25">
+                <label for="opciones" class="form-label d-flex align-items-center justify-content-center gap-2 mb-3">
+                <i class="bi bi-geo-alt-fill text-dark opacity-75"></i>
+                <span class="fw-semibold text-dark">Cine:</span>
+                </label>
+                
+                <select id="opciones" name="opciones" class="form-select border-0 shadow-sm">
+                    <option value="opcion1">Cine 1</option>
+                    <option value="opcion2">Cine 2</option>
+                    <option value="opcion3">Cine 3</option>
+                    <option value="opcion1">Cine 1</option>            
                 </select>
             </div>
         </div>
+
+
+    </div>
+        <div class="peliculas">
+        <?php include("./logica/cartelera.php"); ?>
     </div>
 
-    <div class="peliculas">
-    <?php include("./logica/cartelera.php"); ?>
-    </div>
-
-    <footer class="page-footer fondopastel">
-    <div class="container">
-      <div class="row">
-        <div class="col l3 s12">
-          <h5 class="black-text">Redes Sociales</h5>
-          <ul>
-            <li><a class="black-text" href="https://github.com/MarMontejo04">GitHub</a></li>
-            <li><a class="black-text" href="https://www.facebook.com/?locale=es_LA">Facebook</a></li>
-            <li><a class="black-text" href="https://www.instagram.com/">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="blue-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
+    <footer>  
+        <?php include "./estilos/footer.php"; ?>
+    </footer>
+    
 </body>
 </html>

@@ -3,27 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
-    <link rel="stylesheet" href="./estilos/estiloslogin.css">
+    <title>Error de inicio de sesion</title>
+    <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./estilos/style.css" rel="stylesheet">
 </head>
-<body>
+
+<body class="fondo text-white h-100">
     <header>
         <?php include "./estilos/header.php"; ?>
     </header>
-    
-        <div class="contenido">
-            <h1>Sign in</h1>
-            <p>Correo incorrecto o contraseña incorrecta</p>
-            <form method="POST"  action="./logica/loguear.php">
-                <input type="email" name="correo" placeholder="Email" required/>
-                <br><br>
-                <input type="password" name="contrasena" placeholder="Contraseña" required/>
-                <br><br>
-                <button type="submit">Login</button>
-            </form> 
-            <form method="POST1"  action="./crearCuenta.php">
-                    <button type="submit">¿No tienes cuenta?/ Creala</button>
+
+   <div class="row justify-content-md-center p-5 min-vh-100">
+        <div class="col-md-5 col-lg-4">
+            <div>
+                <h1 class="h1 text-center mb-4">Iniciar Sesion</h1>
+            </div>
+            <form method="POST" action="./logica/loguear.php">
+                <div class="row g-3">
+                    
+                    <div class="col-12">
+                        <div style="text-align: center;">
+                            <h4 style="color: red;">Correo o contraseña incorrecta</h4>
+                        </div>
+   
+                        <label for="correo">Correo</label>
+                        <input type="text" class="form-control w-100" name="correo" required />
+                    </div>
+                    
+                    <div class="col-12">
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" class="form-control w-100" name="contraseña" required />
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-lg text-white gradient-custom w-100" type="submit">Iniciar Sesion</button>
+                    </div>
+                    
+                    <div class="col-12 text-center">
+                        <p>¿No tienes cuenta? 
+                            <a class="text-white link-opacity-25-hover text-opacity-75" href="./crearCuenta.php">Crear cuenta</a>
+                        </p>
+                    </div>
+                </div>
             </form>
         </div>
+    </div> 
+
+    <footer>  
+        <?php include "./estilos/footer.php"; ?>
+    </footer>
+
 </body>
+
 </html>

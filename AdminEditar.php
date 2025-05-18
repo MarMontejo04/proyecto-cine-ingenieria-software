@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <?php include "./estilos/header.php"; ?>
+        <?php include "./estilos/header2.php"; ?>
     </header>
 
     <div class="container-fluid mt-4">

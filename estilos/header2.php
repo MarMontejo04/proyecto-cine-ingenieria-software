@@ -2,9 +2,6 @@
 session_start();
 require_once __DIR__ . '/../logica/conexion.php';
 
-// NOTA PARA EL FUTURO: 
-// ANADIR EL HEADER2 EN LAS VISTAS DE ADMIN
-
 $nombreUsuario = null;
 
 if (isset($_SESSION['id_usuario'])) {
@@ -28,27 +25,7 @@ if (isset($_SESSION['id_usuario'])) {
     <title>Vértigo Films</title>
     <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
     <link href="./estilos/style.css" rel="stylesheet">
-    <style>
-        .gradient-custom {
-            background: linear-gradient(135deg, #0066cc 0%, #003366 100%);
-        }
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 10px;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-        }
-        .btn-login {
-            background-color: transparent;
-            border: 1px solid white;
-            transition: all 0.3s;
-        }
-        .btn-login:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-    </style>
+
 </head>
 <body>
 

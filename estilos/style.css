@@ -5,10 +5,8 @@
   font-style: normal;
 }
 .gradient-custom {
-    /* Colores morados iniciales */
     --purple1: #741A83;
     --purple2: #99006A;
-    /* Colores verdes */
     --green1: #741A83;
     --green2: #741A83;
     
@@ -17,7 +15,7 @@
         var(--purple2) 50%, 
         var(--green1) 100%);
     background-size: 200% 200%;
-    animation: smoothGradient 12s ease infinite;
+    animation: smoothGradient 10s ease infinite;
 }
 
 @keyframes smoothGradient {
@@ -45,4 +43,19 @@ body{
 
 }
 
-
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.btn-login {
+    background-color: transparent;
+    border: 1px solid white;
+    transition: all 0.3s;
+}
+.btn-login:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

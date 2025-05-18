@@ -3,10 +3,10 @@ require 'conexion.php';
 session_start();
 
 $email = $_POST['correo']; 
-$clave = $_POST['contrasena']; 
+$clave = $_POST['contraseña']; 
 
 // Consulta para obtener la contraseña y el rol del usuario
-$q = "SELECT contrasena, tipo_usuario FROM Usuarios WHERE correo = ?";
+$q = "SELECT contraseña, tipo_usuario FROM Usuarios WHERE correo = ?";
 $stmt = mysqli_prepare($conexion, $q);
 mysqli_stmt_bind_param($stmt, "s", $email);
 mysqli_stmt_execute($stmt);
@@ -14,7 +14,7 @@ $resultado = mysqli_stmt_get_result($stmt);
 
 if ($resultado && mysqli_num_rows($resultado) === 1) {
     $fila = mysqli_fetch_assoc($resultado);
-    $hashGuardado = $fila['contrasena'];
+    $hashGuardado = $fila['contraseña'];
     $rol = $fila['tipo_usuario'];
 
     if (password_verify($clave, $hashGuardado)) {
