@@ -15,10 +15,10 @@
 
 
 //Hosting
- //$host_db = "localhost";
- //$user_db = "root";
- //$pass_db = "halo";
- //$db_name = "cine_VertigoDB";
+ $host_db = "localhost";
+ $user_db = "root";
+ $pass_db = "halo";
+ $db_name = "cine_VertigoDB";
 
 //Servidor
 //$host_db = "localhost";
@@ -27,10 +27,10 @@
 //$db_name = "carrito";
 
 //camara culeros se la pasan borrando la mia
- $host_db = "localhost";
- $user_db = "root";
- $pass_db = "Oswal2018";
- $db_name = "cine_VertigoDB";
+ //$host_db = "localhost";
+ //$user_db = "root";
+ //$pass_db = "Oswal2018";
+ //$db_name = "cine_VertigoDB";
 
 // $host_db = "localhost";
 // $user_db = "root";

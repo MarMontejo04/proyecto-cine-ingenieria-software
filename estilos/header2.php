@@ -41,7 +41,7 @@ if (isset($_SESSION['id_usuario'])) {
                     <a class="nav-link px-2 text-white" href="">|</a>
                 </li>
                 <li>
-                    <a class="btn btn-primary nav-link px-2 text-white" href="">Promociones</a>
+                    <a class="btn btn-primary nav-link px-2 text-white" href="vistaPromociones.php">Promociones</a>
                 </li>
             </ul>
 
