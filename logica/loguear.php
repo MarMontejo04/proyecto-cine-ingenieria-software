@@ -20,10 +20,16 @@ if ($resultado && mysqli_num_rows($resultado) === 1) {
     if (password_verify($clave, $hashGuardado)) {
         $_SESSION['username'] = $email;
 
-        if ($rol === 'administrador') {
-            header("Location: ../Admin.php");
+        if (isset($_SESSION['redirigir_a'])) {
+            $destino = $_SESSION['redirigir_a'];
+            unset($_SESSION['redirigir_a']);
+            header("Location: $destino");
         } else {
-            header("Location: ../vistaCartelera.php");
+            if ($rol === 'administrador') {
+                header("Location: ../Admin.php");
+            } else {
+                header("Location: ../index.php");
+            }
         }
         exit;
     } else {

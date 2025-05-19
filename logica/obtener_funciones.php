@@ -28,7 +28,7 @@ if ($resultado->num_rows > 0) {
             echo '<strong>Sala:</strong> ' . htmlspecialchars($fila['sala_nombre']) . '<br>';
             echo '<strong>Día:</strong> ' . htmlspecialchars($fila['dia']) . '<br>';
             echo '<strong>Hora:</strong> ' . htmlspecialchars($fila['hora']) . '<br>';
-            echo '<a href="comprar.php?id_funcion=' . $fila['id_funcion'] . '" class="btn btn-sm btn-primary">Seleccionar</a>';
+            echo '<a href="./ComprarBoletoA.php?id_funcion=' . $fila['id_funcion'] . '" class="btn btn-sm btn-primary">Seleccionar</a>';
             echo '</li>';
         }
 

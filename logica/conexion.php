@@ -6,6 +6,14 @@
 // $pass_db = "gJSmyqHL5Y0";
 // $db_name = "if0_38942601_cine_VertigoDB";
 
+
+//Local Mariana
+$host_db = "localhost:3306";
+$user_db = "root";
+$pass_db = "Surycata04#";
+$db_name = "cine_VertigoDB";
+
+
 //LOCAL (SOLO COMPUTADORA DE ALAN (NO LAS BORREN xd))
 
 //$host_db = "localhost:3306";
@@ -27,10 +35,10 @@
 //$db_name = "carrito";
 
 //camara culeros se la pasan borrando la mia
- $host_db = "localhost";
- $user_db = "root";
- $pass_db = "Oswal2018";
- $db_name = "cine_VertigoDB";
+ //$host_db = "localhost";
+ //$user_db = "root";
+ //$pass_db = "Oswal2018";
+ //$db_name = "cine_VertigoDB";
 
 // $host_db = "localhost";
 // $user_db = "root";

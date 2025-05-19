@@ -1,75 +1,151 @@
 @font-face {
-  font-family: 'Lexend Deca';
-  src: url('../media/fuente/LexendDeca-VariableFont_wght.ttf') format('truetype');
+  font-family: "Lexend Deca";
+  src: url("../media/fuente/LexendDeca-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 .gradient-custom {
-    --purple1: #741A83;
-    --purple2: #99006A;
-    --green1: #741A83;
-    --green2: #741A83;
-    
-    background: linear-gradient(90deg, 
-        var(--purple1) 0%, 
-        var(--purple2) 50%, 
-        var(--green1) 100%);
-    background-size: 200% 200%;
-    animation: smoothGradient 10s ease infinite;
+  --purple1: #741a83;
+  --purple2: #99006a;
+  --green1: #741a83;
+  --green2: #741a83;
+
+  background: linear-gradient(
+    90deg,
+    var(--purple1) 0%,
+    var(--purple2) 50%,
+    var(--green1) 100%
+  );
+  background-size: 200% 200%;
+  animation: smoothGradient 10s ease infinite;
 }
 
 .gradient-custom2 {
-    --purple1: #3d3d3d;
-    --purple2: #3a44f8;
-    --green1: #3d3d3d;
-    --green2: #3d3d3d;
-    
-    background: linear-gradient(90deg, 
-        var(--purple1) 0%, 
-        var(--purple2) 50%, 
-        var(--green1) 100%);
-    background-size: 200% 200%;
-    animation: smoothGradient 10s ease infinite;
+  --purple1: #3d3d3d;
+  --purple2: #3a44f8;
+  --green1: #3d3d3d;
+  --green2: #3d3d3d;
+
+  background: linear-gradient(
+    90deg,
+    var(--purple1) 0%,
+    var(--purple2) 50%,
+    var(--green1) 100%
+  );
+  background-size: 200% 200%;
+  animation: smoothGradient 10s ease infinite;
 }
 
 @keyframes smoothGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-body{
-  font-family: 'Lexend Deca', sans-serif;
+body {
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .fondo {
-    background-image: url('imgFondo/Fondo1.jpg'); 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-
+  background-image: url("imgFondo/Fondo1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .user-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 .btn-login {
-    background-color: transparent;
-    border: 1px solid white;
-    transition: all 0.3s;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: all 0.3s;
 }
 .btn-login:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.horario-box {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.horario-box:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.info-text {
+  text-align: justify;
+}
+
+.pantalla {
+  background-color: #999;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.sala {
+  display: flex;
+  flex-direction: column;
+}
+
+.asiento {
+  width: 40px;
+  height: 40px;
+  background-color: #e0e0e0;
+  border: 2px solid #999;
+  color: #000;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin: 3px;
+}
+
+.asiento:hover {
+  background-color: #e8c99b;
+}
+
+.asiento.seleccionado {
+  background-color: #e28700;
+  color: white;
+}
+
+.asiento.ocupado {
+  background-color: #741a83;
+  cursor: not-allowed;
+  color: white;
+}
+
+.fila-asientos {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.resumen-compra {
+  margin-top: 20px;
 }
