@@ -16,13 +16,37 @@
         <?php include "./estilos/header2.php"; ?>
     </header>
 
-    <?php include "logica/elegirAsientos.php"; ?>
+    <div>
+        <form method="POST" action="procesar_venta.php">
+            <input type="hidden" name="id_usuario" value="<?= $_SESSION['usuario_id'] ?>">
+            <input type="hidden" name="id_funcion" value="<?=$id_funcion?>">
+
+            <?php foreach ($asientos as $id): ?>
+                <input type="hidden" name="asientos[]" value="<?= $id ?>">
+            <?php endforeach; ?>
+
+            <label>Método de pago:</label>
+            <input type="text" name="tipo" required>
+
+            <label>Datos:</label>
+            <input type="text" name="datos" required>
+
+            <input type="hidden" name="total" value="<?= $total ?>">
+            <input type="hidden" name="cantidad" value="<?= count($asientos) ?>">
+
+            <button type="submit">Finalizar compra</button>
+        </form>
 
 
+    </div>
 
     <footer>
         <?php include "./estilos/footer.php"; ?>
     </footer>
+    <script>
+        document.getElementById('asientos_input').value = localStorage.getItem('asientos');
+        document.getElementById('total_display').textContent = localStorage.getItem('totalCompra');
+    </script>
 
 </body>
 

@@ -19,15 +19,14 @@
     <?php include "logica/elegirAsientos.php"; ?>
 
     <div class="container mb-3 mt-3">
-        <h2 class="mb-3 mt-3">Selecciona tus asientos</h2>
-        <div class="row">
-            <div class="col-md-8">
-                <div class="pantalla">Pantalla</div>
-                <form method="POST" action="procesar_venta.php">
-                    <input type="hidden" name="id_funcion" value="<?= $id_funcion ?>">
-                    <input type="hidden" name="id_usuario" value="1">
-                    <input type="hidden" name="asientos" id="asientos">
+        <form method="POST" id="form-compra">
+            <input type="hidden" name="id_funcion" value="<?= $id_funcion ?>">
+            <input type="hidden" name="id_usuario" value="<?= $_SESSION['usuario_id']?>">
+            <input type="hidden" name="asientos" id="asientos">
 
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="pantalla">Pantalla</div>
                     <?php foreach ($asientos as $fila => $filaAsientos): ?>
                         <div class="fila-asientos mb-2">
                             <strong class="me-2"><?= $fila ?></strong>
@@ -42,20 +41,19 @@
                             <?php endforeach; ?>
                         </div>
                     <?php endforeach; ?>
-                </form>
+                </div>
+
+                <div class="col-md-4 resumen-compra">
+                    <h4>Resumen de Compra</h4>
+                    <p id="resumen">Asientos seleccionados: Ninguno</p>
+                    <p><strong>Total:</strong> $<span id="total">0</span> MXN</p>
+                    <button type="button" class="btn btn-primary mt-3" onclick="irAPago()">Confirmar Compra</button>
+                </div>
             </div>
-            <div class="col-md-4 resumen-compra">
-                <h4>Resumen de Compra</h4>
-                <p id="resumen">Asientos seleccionados: Ninguno</p>
-                <p><strong>Total:</strong> $<span id="total">0</span> MXN</p>
-                <button type="submit" class="btn btn-primary mt-3" onclick="irAPago()">Confirmar Compra</button>
-            </div>
-
-
-
-        </div>
+        </form>
     </div>
-    </div>
+
+
 
     <script>
         const seleccionados = new Set();
@@ -65,17 +63,14 @@
         const inputAsientos = document.getElementById('asientos');
 
         function actualizarResumen() {
-            const seleccionados = document.querySelectorAll('.asiento.seleccionado');
-            const resumen = document.getElementById('resumen');
-            const total = document.getElementById('total');
-
-            if (seleccionados.length === 0) {
+            const activos = document.querySelectorAll('.asiento.seleccionado');
+            if (activos.length === 0) {
                 resumen.textContent = "Asientos seleccionados: Ninguno";
                 total.textContent = "0";
                 return;
             }
 
-            const etiquetas = Array.from(seleccionados).map(asiento => asiento.dataset.numero);
+            const etiquetas = Array.from(activos).map(a => a.dataset.numero);
             resumen.textContent = "Asientos seleccionados: " + etiquetas.join(', ');
             total.textContent = etiquetas.length * precioPorAsiento;
         }
@@ -90,7 +85,8 @@
             localStorage.setItem('asientosSeleccionados', asientos.join(','));
             localStorage.setItem('totalCompra', asientos.length * precioPorAsiento);
 
-            window.location.href = "Pago.php";
+            window.location.href = "Pago.php?id_funcion=" + <?= $id_funcion ?>;
+
         }
 
         document.querySelectorAll('.disponible').forEach(el => {
@@ -113,6 +109,7 @@
             });
         });
     </script>
+
 
     <footer>
         <?php include "./estilos/footer.php"; ?>

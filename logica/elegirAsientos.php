@@ -7,9 +7,10 @@ if (!isset($_SESSION['username'])) {
     exit;
 }
 
-
-$id_funcion = $_GET['id_funcion'];
-
+if (!isset($_GET['id_funcion']) || !is_numeric($_GET['id_funcion'])) {
+    die("Parámetro de función no válido.");
+}
+$id_funcion = intval($_GET['id_funcion']);
 
 $sql_sala = "SELECT id_sala FROM Funcion WHERE id_funcion = ?";
 $stmt = $conexion->prepare($sql_sala);
