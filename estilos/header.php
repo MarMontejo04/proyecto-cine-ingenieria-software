@@ -31,6 +31,8 @@
                     <span class="d-block h5">FILMS</span>
                     </a>
                 <img src="./media/LOGOVERTIGO.PNG" width="70" height="70" class="ms-3">
+
+                <a href="Login.php" class="btn btn-login text-white">Iniciar sesión</a>
             </div>
 
             </div>

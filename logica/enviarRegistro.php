@@ -41,12 +41,12 @@ if($count==1){
 }else{
 
     mysqli_query($conexion,"INSERT INTO usuarios(
-        nombre, apellido, correo, contrasena, telefono, fecha_nacimiento, direccion)
+        nombre, apellido, correo, contraseña, telefono, fecha_nacimiento, direccion)
         VALUES(
             '$_POST[nombre]',
             '$_POST[apellido]',
             '$_POST[correo]',
-            '$_POST[contrasena]',
+            '$_POST[contraseña]',
             '$_POST[telefono]',
             '$_POST[fecha_nacimiento]',
             '$_POST[direccion]'

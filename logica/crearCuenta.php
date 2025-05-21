@@ -9,9 +9,9 @@ $telefono = $_POST['telefono'];
 $fecha_nacimiento = $_POST['fecha_de_nacimiento'];
 $tipo_usuario = 'cliente'; 
 
-$contrasena = '123456'; 
+$contraseña = '123456'; 
 
-$contrasena = password_hash($_POST['contrasena'], PASSWORD_DEFAULT);
+$contraseña = password_hash($_POST['contraseña'], PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO Usuarios (
             nombre,
@@ -20,7 +20,7 @@ $sql = "INSERT INTO Usuarios (
             correo,
             telefono,
             fecha_de_nacimiento,
-            contrasena,
+            contraseña,
             tipo_usuario
         ) VALUES (
             '$nombre',
@@ -29,15 +29,17 @@ $sql = "INSERT INTO Usuarios (
             '$correo',
             '$telefono',
             '$fecha_nacimiento',
-            '$contrasena',
+            '$contraseña',
             '$tipo_usuario'
         )";
 
 if ($conexion->query($sql) === TRUE) {
-    header("Location: ../vistaCartelera.php");
+    header("Location: ../conSesionActiva/vistaCartelera.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conexion->error;
 }
 
 $conexion->close();
 ?>
+
+<!-- cambie a contraseña -->

@@ -32,7 +32,7 @@
                     
                     <div class="col-12">
                         <label for="contraseña">Contraseña</label>
-                        <input type="password" class="form-control w-100" name="contrasena" required />
+                        <input type="password" class="form-control w-100" name="contraseña" required />
                     </div>
 
                     <div class="col-12">

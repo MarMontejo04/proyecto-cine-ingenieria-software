@@ -8,18 +8,17 @@
 
 
 //Local Mariana
+// $host_db = "localhost:3306";
+// $user_db = "root";
+// $pass_db = "Surycata04#";
+// $db_name = "cine_VertigoDB";
+
+
+// Local Alan
 $host_db = "localhost:3306";
 $user_db = "root";
-$pass_db = "Surycata04#";
+$pass_db = "ImpliedFiber356@";
 $db_name = "cine_VertigoDB";
-
-
-//LOCAL (SOLO COMPUTADORA DE ALAN (NO LAS BORREN xd))
-
-//$host_db = "localhost:3306";
-//$user_db = "root";
-//$pass_db = "ImpliedFiber356@";
-//$db_name = "cine_VertigoDB";
 
 
 //Hosting

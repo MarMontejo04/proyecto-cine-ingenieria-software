@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <?php include "./estilos/header2.php"; ?>
+        <?php include "./estilos/header.php"; ?>
     </header>
 
     <div>
@@ -27,7 +27,7 @@
                 </div> 
 
                 <div class="col-lg-3 col-md-6 text-start">
-                    <a href="vistaHorarios.php" class="fs-4 fw-bold text-decoration-none">Horarios</a>
+                    <a href="indexHorarios.php" class="fs-4 fw-bold text-decoration-none">Horarios</a>
                 </div>
                 
             </div>

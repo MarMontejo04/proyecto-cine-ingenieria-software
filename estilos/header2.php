@@ -1,23 +1,4 @@
-<?php
-session_start();
-require_once __DIR__ . '/../logica/conexion.php';
 
-$nombreUsuario = null;
-
-if (isset($_SESSION['id_usuario'])) {
-    $id_usuario = $_SESSION['id_usuario'];
-    
-    $sql = "SELECT nombre FROM usuarios WHERE id_usuario = ?";
-    $stmt = $conexion->prepare($sql);
-    $stmt->bind_param("i", $id_usuario);
-    $stmt->execute();
-    $resultado = $stmt->get_result();
-
-    if ($fila = $resultado->fetch_assoc()) {
-        $nombreUsuario = htmlspecialchars($fila['nombre']);
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,27 +6,25 @@ if (isset($_SESSION['id_usuario'])) {
     <title>Vértigo Films</title>
     <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
     <link href="./estilos/style.css" rel="stylesheet">
-
 </head>
 <body>
 
 <header class="p-3 mb-3 gradient-custom">
     <div class="container">
         <div class="d-flex align-items-center justify-content-between">
-            <!-- Menú izquierdo -->
+            
             <ul class="nav col-4 col-lg-auto mb-2 justify-content-center">
                 <li>
-                    <a class="btn btn-primary nav-link px-2 text-white" href="./index.php">Cartelera</a>    
+                    <a class="btn btn-login text-white px-2 text-white" href="./index.php">Cartelera</a>    
                 </li>
                 <li>
-                    <a class="nav-link px-2 text-white" href="">|</a>
+                    <h1 class="nav-link px-2 text-white">|</h1>
                 </li>
                 <li>
-                    <a class="btn btn-primary nav-link px-2 text-white" href="vistaPromociones.php">Promociones</a>
+                    <a class="btn btn-login text-white px-2 text-white" href="vistaPromociones.php">Promociones</a>
                 </li>
             </ul>
 
-            <!-- Logo central -->
             <div class="d-flex align-items-center">
                 <a class="navbar-brand px-2 text-center text-white d-block" href="#">
                     <span class="d-block h4 mb-0 fw-bold">VÉRTIGO</span>
@@ -54,16 +33,15 @@ if (isset($_SESSION['id_usuario'])) {
                 <img src="./media/LOGOVERTIGO.PNG" width="70" height="70" class="ms-3">
             </div>
 
-            <!-- Área de usuario -->
             <div class="text-end">
-                <?php if ($nombreUsuario): ?>
+                <?php if (isset($_SESSION['username'])): ?>
                     <div class="d-flex align-items-center">
-                        <img src="./media/user-avatar.png" class="user-avatar" alt="Avatar">
-                        <span class="text-white me-3"><?= $nombreUsuario ?></span>
-                        <a href="../logica/logout.php" class="btn btn-login text-white">Salir</a>
+                        <img src="./media/perfil.png" class="user-avatar me-2" alt="Avatar" width="30" height="30">
+                        <span class="text-white me-3"><?= htmlspecialchars($_SESSION['username']) ?></span>
+                        <a href="./logica/salir.php" class="btn btn-login text-white">Salir</a>
                     </div>
                 <?php else: ?>
-                    <a href="Login.php" class="btn btn-login text-white">Iniciar sesión</a>
+                    
                 <?php endif; ?>
             </div>
         </div>

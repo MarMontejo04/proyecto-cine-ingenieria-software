@@ -5,6 +5,10 @@
   font-weight: bold;
   font-style: normal;
 }
+
+
+
+/* usuario */
 .gradient-custom {
   --purple1: #741a83;
   --purple2: #99006a;
@@ -21,6 +25,7 @@
   animation: smoothGradient 10s ease infinite;
 }
 
+/* admin */
 .gradient-custom2 {
   --purple1: #3d3d3d;
   --purple2: #3a44f8;
@@ -59,6 +64,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+}
+
+.fondo2 {
+  background-image: url("imgFondo/Fondo2.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90vh;
 }
 
 .user-avatar {

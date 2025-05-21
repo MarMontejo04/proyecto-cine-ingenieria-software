@@ -48,8 +48,8 @@
                         <input type="tel" class="form-control" name="telefono" required />
                     </div>
                     <div class="col-12">
-                        <label for="contrasena">Contraseña</label>
-                        <input type="password" class="form-control" name="contrasena" required />
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" class="form-control" name="contraseña" required />
                     </div>
 
                     <button class="btn btn-lg text-white gradient-custom" type="submit">Registrarse</button>
