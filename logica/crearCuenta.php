@@ -9,9 +9,9 @@ $telefono = $_POST['telefono'];
 $fecha_nacimiento = $_POST['fecha_de_nacimiento'];
 $tipo_usuario = 'cliente'; 
 
-$contraseña = '123456'; 
+$contrasena = '123456'; 
 
-$contraseña = password_hash($_POST['contraseña'], PASSWORD_DEFAULT);
+$contrasena = password_hash($_POST['contrasena'], PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO Usuarios (
             nombre,
@@ -20,7 +20,7 @@ $sql = "INSERT INTO Usuarios (
             correo,
             telefono,
             fecha_de_nacimiento,
-            contraseña,
+            contrasena,
             tipo_usuario
         ) VALUES (
             '$nombre',
@@ -29,7 +29,7 @@ $sql = "INSERT INTO Usuarios (
             '$correo',
             '$telefono',
             '$fecha_nacimiento',
-            '$contraseña',
+            '$contrasena',
             '$tipo_usuario'
         )";
 
@@ -42,4 +42,4 @@ if ($conexion->query($sql) === TRUE) {
 $conexion->close();
 ?>
 
-<!-- cambie a contraseña -->
+<!-- cambie a contrasena -->

@@ -66,7 +66,7 @@ if(!isset($email)){
             <tr >
                 <th>Usuario</th>
                 <th>Correo Electrónico</th>
-                <th>Contraseña</th>
+                <th>contrasena</th>
                 <th>Teléfono</th>
                 <th>Fecha de Registro</th>
                 <th>Fecha de Nacimiento</th>
@@ -80,7 +80,7 @@ if(!isset($email)){
             echo "<tr>";
                 echo"<td class='left-align'>". $row['nombre']." ".$row['apellido'] ."</td>";
                 echo"<td class='center-align'>". $row['correo'] ."</td>";
-                echo"<td class='center-align'>". $row['contraseña'] ."</td>";
+                echo"<td class='center-align'>". $row['contrasena'] ."</td>";
                 echo"<td class='center-align'>". $row['telefono'] ."</td>";
                 echo"<td class='center-align'>". $row['fecha_creacion_user'] ."</td>";
                 echo"<td class='center-align'>". $row['fecha_nacimiento'] ."</td>";

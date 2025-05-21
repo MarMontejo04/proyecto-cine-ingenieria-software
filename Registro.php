@@ -78,8 +78,8 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="password" name="contraseña" maxlength="20" class="validate" required>
-                        <label for="contraseña">Contraseña:</label>
+                        <input type="password" name="contrasena" maxlength="20" class="validate" required>
+                        <label for="contrasena">contrasena:</label>
                     </div>
                 </div>
                 <button class= "btn waves-effect waves-light blue lighten-5 black-text" type="submit">Enviar registro<i class="material-icons right">send</i></button>

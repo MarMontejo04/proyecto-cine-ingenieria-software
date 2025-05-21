@@ -9,7 +9,7 @@ CREATE TABLE Usuarios (
   correo VARCHAR(150) UNIQUE,
   telefono VARCHAR(20),
   fecha_de_nacimiento DATE,
-  contraseña VARCHAR(255),
+  contrasena VARCHAR(255),
   tipo_usuario ENUM('cliente', 'administrador')
 );
 
@@ -102,7 +102,7 @@ CREATE TABLE PromocionUsuario (
   FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
 );
 
--- Tabla de reservasINSERT INTO Usuarios (id_usuario, nombre, apellido_paterno, apellido_materno, correo,telefono, fecha_de_nacimiento, contraseña, tipo_usuario) VALUES
+-- Tabla de reservasINSERT INTO Usuarios (id_usuario, nombre, apellido_paterno, apellido_materno, correo,telefono, fecha_de_nacimiento, contrasena, tipo_usuario) VALUES
 
 CREATE TABLE Reserva (
   id_reserva INT AUTO_INCREMENT PRIMARY KEY,
@@ -496,7 +496,7 @@ VALUES
 
 
 
-INSERT INTO Usuarios (id_usuario, nombre, apellido_paterno, apellido_materno, correo,telefono, fecha_de_nacimiento, contraseña, tipo_usuario) VALUES
+INSERT INTO Usuarios (id_usuario, nombre, apellido_paterno, apellido_materno, correo,telefono, fecha_de_nacimiento, contrasena, tipo_usuario) VALUES
 (1, 'Donovan Amaury', 'Alcantara', 'Cruz', 'mau@gmail.com', '5512345678', '2002-01-25', '$2y$10$f.WI0tmajCqYjLgeP3rWN.l2Kxt.38UbUeDt16UJw.9SIU65b3SLS', 'cliente'),
 (2, 'Mariana', 'Montejo', 'Padilla', 'mariana@gmail.com', '5510283718', '2004-10-11', '$2y$10$enF2/nxSO/7.Fsx1YUr9/u0vC84izmkCfs.53nRVr2XU4i8pRxAzu', 'cliente'),
 (3, 'Alan', 'Otzar', 'NoMeAcuerdo', 'clasista@unam.fes.aragon.mx', '5552983718', '2004-05-15', '$2y$10$vPO92Thc9uEiidZ6JUe/P.QtzB56CgF6V6llOr4xGc8oFButSKnFW', 'cliente'),
