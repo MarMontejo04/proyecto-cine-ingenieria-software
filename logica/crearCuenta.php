@@ -34,10 +34,12 @@ $sql = "INSERT INTO Usuarios (
         )";
 
 if ($conexion->query($sql) === TRUE) {
-    header("Location: ../conSesionActiva/vistaCartelera.php");
+    header("Location: ../Login.php");
+    exit();
 } else {
     echo "Error: " . $sql . "<br>" . $conexion->error;
 }
+
 
 $conexion->close();
 ?>

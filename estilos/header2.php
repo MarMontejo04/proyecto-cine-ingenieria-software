@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -7,6 +12,8 @@
     <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
     <link href="./estilos/style.css" rel="stylesheet">
 </head>
+
+
 <body>
 
 <header class="p-3 mb-3 gradient-custom">
@@ -14,14 +21,24 @@
         <div class="d-flex align-items-center justify-content-between">
             
             <ul class="nav col-4 col-lg-auto mb-2 justify-content-center">
-                <li>
-                    <a class="btn btn-login text-white px-2 text-white" href="./index.php">Cartelera</a>    
-                </li>
+
+<li>
+<?php
+if (isset($_SESSION['username'])) {
+    // Si hay sesión activa, manda a vistaCartelera
+    echo '<a class="btn btn-login text-white px-2" href="./vistaCartelera.php">Cartelera</a>';
+} else {
+    // Si no hay sesión, manda a index
+    echo '<a class="btn btn-login text-white px-2" href="./index.php">Cartelera</a>';
+}
+?>
+</li>
+
                 <li>
                     <h1 class="nav-link px-2 text-white">|</h1>
                 </li>
                 <li>
-                    <a class="btn btn-login text-white px-2 text-white" href="vistaPromociones.php">Promociones</a>
+                    <a class="btn btn-login text-white px-2 text-white" href="./vistaPromociones.php">Promociones</a>
                 </li>
             </ul>
 

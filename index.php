@@ -16,18 +16,9 @@
         <?php include "./estilos/header.php"; ?>
     </header>
 
-    <div>
-        <div class = "container my-4" >
-            <div class="row g-4"> 
-                <div class="col-lg-3 col-md-6 text-center">
-                    <h1 class="fs-4 fw-bold text-decoration-none">Cartelera</h1>
-                </div>        
-            </div>
-        </div>
+    <div class="d-flex justify-content-center">
+        <h1 class="fs-4 fw-bold text-decoration-none">Cartelera</h1>
     </div>
-
-    
-
 
     <div class="peliculas">
         <?php include("./logica/cartelera2.php"); ?>

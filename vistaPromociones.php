@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    header("location: ../vistaPromociones.php");
+    header("location: ../index.php");
     exit();
 }
 $correo = $_SESSION['username'];
@@ -12,7 +12,7 @@ require('logica/conexion.php');
 mysqli_set_charset($conexion, 'utf8');
 
 if (!isset($correo)) {
-    header("location: ./vistaPromociones.php");
+    header("location: ./index.php");
     exit();
 }
 ?>
