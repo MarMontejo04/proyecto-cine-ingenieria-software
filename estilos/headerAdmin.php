@@ -28,7 +28,7 @@
                 <span class="d-block h5 text-white">ADMIN</span>
             </div>
 
-            <a href="./logica/salir.php" class="btn btn-login text-white">Salir</a>
+            <a href="../../logica/salir.php" class="btn btn-login text-white">Salir</a>
 
         </div>
     </div>
