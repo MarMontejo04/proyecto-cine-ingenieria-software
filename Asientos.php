@@ -11,7 +11,7 @@
 </head>
 
 
-<body>
+<body class="fondo2 h-100">
     <header>
         <?php include "./estilos/header2.php"; ?>
     </header>
@@ -21,11 +21,11 @@
     <div class="container mb-3 mt-3">
         <form method="POST" id="form-compra">
             <input type="hidden" name="id_funcion" value="<?= $id_funcion ?>">
-            <input type="hidden" name="id_usuario" value="<?= $_SESSION['usuario_id']?>">
+            <input type="hidden" name="username1" value="<?= $_SESSION['username']?>">
             <input type="hidden" name="asientos" id="asientos">
 
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 p-5">
                     <div class="pantalla">Pantalla</div>
                     <?php foreach ($asientos as $fila => $filaAsientos): ?>
                         <div class="fila-asientos mb-2">
@@ -41,7 +41,9 @@
                             <?php endforeach; ?>
                         </div>
                     <?php endforeach; ?>
+
                 </div>
+
 
                 <div class="col-md-4 resumen-compra">
                     <h4>Resumen de Compra</h4>
@@ -49,6 +51,11 @@
                     <p><strong>Total:</strong> $<span id="total">0</span> MXN</p>
                     <button type="button" class="btn btn-primary mt-3" onclick="irAPago()">Confirmar Compra</button>
                 </div>
+
+                <div class="pantalla2">.</div>
+
+
+
             </div>
         </form>
     </div>
@@ -85,7 +92,35 @@
             localStorage.setItem('asientosSeleccionados', asientos.join(','));
             localStorage.setItem('totalCompra', asientos.length * precioPorAsiento);
 
-            window.location.href = "Pago.php?id_funcion=" + <?= $id_funcion ?>;
+
+            // Crea inputs ocultos con los IDs seleccionados
+        asientos.forEach(id => {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'asientos[]';
+            input.value = id;
+            document.getElementById('form-compra').appendChild(input);
+        });
+
+// También agrega el total
+        const totalInput = document.createElement('input');
+            totalInput.type = 'hidden';
+            totalInput.name = 'total';
+            totalInput.value = asientos.length * precioPorAsiento;
+            document.getElementById('form-compra').appendChild(totalInput);
+
+// Cantidad de boletos
+        const cantidadInput = document.createElement('input');
+            cantidadInput.type = 'hidden';
+            cantidadInput.name = 'cantidad';
+            cantidadInput.value = asientos.length;
+            document.getElementById('form-compra').appendChild(cantidadInput);
+
+// Envía el formulario
+            document.getElementById('form-compra').action = 'Pago.php';
+            document.getElementById('form-compra').method = 'POST';
+            document.getElementById('form-compra').submit();
+
 
         }
 

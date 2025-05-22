@@ -7,11 +7,10 @@
 }
 
 
-
 /* usuario */
 .gradient-custom {
   --purple1: #741a83;
-  --purple2: #99006a;
+  --purple2: #d20093;
   --green1: #741a83;
   --green2: #741a83;
 
@@ -24,6 +23,64 @@
   background-size: 200% 200%;
   animation: smoothGradient 10s ease infinite;
 }
+
+.compra {
+  --purple1: #c785d2;
+  --purple2: #a600c3;
+  --green1: #ff00d4;
+  --green2: #aa5db8;
+
+  background: linear-gradient(
+    270deg,
+    var(--purple1),
+    var(--purple2),
+    var(--green1),
+    var(--green2)
+  );
+  background-size: 800% 800%;
+  animation: smoothGradient 5s ease infinite;
+
+  color: white;
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+
+  /* Centrado dentro de su contenedor */
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* Fondo animado */
+@keyframes smoothGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Animación del fondo */
+@keyframes smoothGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 /* admin */
 .gradient-custom2 {
@@ -72,7 +129,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 .user-avatar {
@@ -110,13 +167,20 @@ body {
 .info-text {
   text-align: justify;
 }
-
 .pantalla {
   background-color: #999;
   color: white;
   text-align: center;
   padding: 15px;
   margin-bottom: 30px;
+}
+
+.pantalla2 {
+  background-color: #ffffff00;
+  color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 90px;
+  margin-bottom: 3px;
 }
 
 .sala {
@@ -162,4 +226,39 @@ body {
 
 .resumen-compra {
   margin-top: 20px;
+}
+
+/* Ajuste para body y html */
+.pagina-pago {
+    height: 90%;
+}
+
+/* Contenedor central de contenido */
+.pagina-pago__contenido {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 2rem 2rem 2rem;
+}
+
+.pagina-pago__formulario {
+    width: 100%;
+    max-width: 600px;
+    font-size: 1.3rem;
+}
+
+.pagina-pago__formulario input,
+.pagina-pago__formulario select,
+.pagina-pago__formulario button {
+    font-size: 1.2rem !important;
+}
+
+.pagina-pago__formulario label {
+    font-weight: bold;
+}
+
+.pagina-pago__formulario .btn-group .btn {
+    padding: 0.75rem 1.5rem;
 }

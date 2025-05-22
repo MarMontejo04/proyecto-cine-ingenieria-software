@@ -25,38 +25,54 @@ if (!isset($correo)) {
     <title>Promociones</title>
     <link rel="stylesheet" href="./estilos/estiloInicioCartelera.css">
     <link rel="stylesheet" href="./estilos/style.css">
-    <style>
-        .titulo-promociones {
-            text-align: center;
-            font-size: 3rem;
-            font-weight: bold;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            color: #333;
-        }
+<style>
+    .titulo-promociones {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: #333;
+    }
+    
+    .fondo2 {
+        background-image: url("imgFondo/Fondo2.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 90vh;
+    }
 
-        .promo-img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+    .promo-img {
+        width: 100%;
+        max-width: 250px; /* Limita el ancho máximo */
+        border-radius: 10px;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 1);
+        transition: transform 0.3s ease;
+    }
 
-        .promo-img:hover {
-            transform: scale(1.05);
-        }
+    .promo-img:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 4px 32px rgb(98, 0, 115);
+    }
 
-        .promo-card {
-            padding: 1rem;
-            text-align: center;
-        }
+    .promo-card {
+        padding: 1cm; /* Reducir el padding */
+        padding-top: 0.5cm;
+        padding-bottom: 0.2cm;
+        text-align: center;
+        display: flex;
+        justify-content: center; /* Centrar la imagen horizontalmente */
+    }
 
-        .container-promos {
-            padding: 2rem;
-        }
-    </style>
-</head>
-<body>
+    .container-promos {
+        padding-top: 0.5cm;
+        padding-bottom: 6cm;
+    }
+
+</style>
+<body class="fondo2 h-100">
     <header>
         <?php include "./estilos/header2.php"; ?>
     </header>
@@ -76,6 +92,19 @@ if (!isset($correo)) {
             </div>
             <div class="col-md-6 col-lg-3 promo-card">
                 <img src="./imagenes/promocion4.png" alt="Promoción 4" class="promo-img">
+            </div>
+
+            <div class="col-md-6 col-lg-3 promo-card">
+                <img src="./imagenes/promocion5.png" alt="Promoción 5" class="promo-img">
+            </div>
+            <div class="col-md-6 col-lg-3 promo-card">
+                <img src="./imagenes/promocion6.png" alt="Promoción 6" class="promo-img">
+            </div>
+            <div class="col-md-6 col-lg-3 promo-card">
+                <img src="./imagenes/promocion7.png" alt="Promoción 7" class="promo-img">
+            </div>
+            <div class="col-md-6 col-lg-3 promo-card">
+                <img src="./imagenes/promocion8.png" alt="Promoción 8" class="promo-img">
             </div>
         </div>
     </div>

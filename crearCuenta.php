@@ -53,6 +53,7 @@
                     </div>
 
                     <button class="btn btn-lg text-white gradient-custom" type="submit">Registrarse</button>
+                    
                     <div class="text-center pb-5">
                         <p>¿Tienes cuenta? <a class="link-opacity-25-hover mb-1" href="./Login.php">Ingresa</a></p>
                     </div>
