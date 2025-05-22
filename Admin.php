@@ -25,7 +25,7 @@
             <form method="GET" action="./Vistas/VistasAdmin/Funciones.php">
                 <button type="submit" class="btn btn-secondary">Editar Funciones</button>
             </form>
-             <form method="GET" action="../../\Vistas\VistasAdmin\AdminSalas.php">
+             <form method="GET" action="./Vistas/VistasAdmin/AdminSalas.php">
                 <button type="submit" class="btn btn-secondary">Editar Salas</button>
             </form>
         </div>
