@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <?php include "./estilos/headerAdmin.php"; ?>
+        <?php include "estilos/headerAdmin2.php"; ?>
     </header>
     
     <div class="ECE">
