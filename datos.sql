@@ -1,5 +1,6 @@
-create DATABASE cine_VertigoDB;
+create DATABASE cine_VertigoDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 use cine_VertigoDB;
+
 -- Tabla de usuarios
 CREATE TABLE Usuarios (
   id_usuario INT AUTO_INCREMENT PRIMARY KEY,
@@ -11,7 +12,8 @@ CREATE TABLE Usuarios (
   fecha_de_nacimiento DATE,
   contrasena VARCHAR(255),
   tipo_usuario ENUM('cliente', 'administrador')
-);
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Tabla de métodos de pago
 CREATE TABLE MetodoPago (
@@ -20,7 +22,8 @@ CREATE TABLE MetodoPago (
   tipo VARCHAR(50),
   datos VARCHAR(255),
   FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Tabla de cines o sucursales
 CREATE TABLE Cine (
@@ -28,7 +31,8 @@ CREATE TABLE Cine (
   nombre VARCHAR(100),
   ubicacion VARCHAR(255),
   gerente VARCHAR(100)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Tabla de salas
 CREATE TABLE Sala (
@@ -38,7 +42,8 @@ CREATE TABLE Sala (
   tipo ENUM('tradicional', 'VIP'),
   id_cine INT,
   FOREIGN KEY (id_cine) REFERENCES Cine(id_cine)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Tabla de asientos
 CREATE TABLE Asiento (
@@ -47,7 +52,8 @@ CREATE TABLE Asiento (
   fila CHAR(1),
   numero INT,
   FOREIGN KEY (id_sala) REFERENCES Sala(id_sala)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Tabla de películas
 CREATE TABLE Pelicula (
@@ -58,7 +64,8 @@ CREATE TABLE Pelicula (
   duracion INT,
   genero VARCHAR(50),
   poster_url VARCHAR(1000)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Tabla de funciones
 CREATE TABLE Funcion (
@@ -73,7 +80,8 @@ CREATE TABLE Funcion (
   estado ENUM('borrador', 'activa', 'finalizada', 'cancelada'),
   FOREIGN KEY (id_pelicula) REFERENCES Pelicula(id_pelicula),
   FOREIGN KEY (id_sala) REFERENCES Sala(id_sala)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Tabla de promociones
 CREATE TABLE Promocion (
@@ -82,7 +90,8 @@ CREATE TABLE Promocion (
   descripcion TEXT,
   fecha_inicio DATE,
   fecha_fin DATE
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Relación promociones por cine
 CREATE TABLE PromocionCine (
@@ -91,7 +100,8 @@ CREATE TABLE PromocionCine (
   PRIMARY KEY (id_promocion, id_cine),
   FOREIGN KEY (id_promocion) REFERENCES Promocion(id_promocion),
   FOREIGN KEY (id_cine) REFERENCES Cine(id_cine)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Relación promociones por usuario
 CREATE TABLE PromocionUsuario (
@@ -100,7 +110,8 @@ CREATE TABLE PromocionUsuario (
   PRIMARY KEY (id_promocion, id_usuario),
   FOREIGN KEY (id_promocion) REFERENCES Promocion(id_promocion),
   FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Tabla de reservasINSERT INTO Usuarios (id_usuario, nombre, apellido_paterno, apellido_materno, correo,telefono, fecha_de_nacimiento, contrasena, tipo_usuario) VALUES
 
@@ -113,7 +124,8 @@ CREATE TABLE Reserva (
   estado ENUM('activa', 'cancelada', 'vencida'),
   FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),
   FOREIGN KEY (id_funcion) REFERENCES Funcion(id_funcion)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Relación entre reserva y asiento
 CREATE TABLE ReservaAsiento (
@@ -123,7 +135,8 @@ CREATE TABLE ReservaAsiento (
   PRIMARY KEY (id_reserva, id_asiento),
   FOREIGN KEY (id_reserva) REFERENCES Reserva(id_reserva),
   FOREIGN KEY (id_asiento) REFERENCES Asiento(id_asiento)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Tabla de ventas
 CREATE TABLE VentaBoleto (
@@ -137,7 +150,8 @@ CREATE TABLE VentaBoleto (
   FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),
   FOREIGN KEY (id_funcion) REFERENCES Funcion(id_funcion),
   FOREIGN KEY (id_Pago) REFERENCES MetodoPago(id_Pago)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Relación entre venta y asiento
 CREATE TABLE VentaAsiento (
@@ -146,7 +160,8 @@ CREATE TABLE VentaAsiento (
   PRIMARY KEY (id_venta, id_asiento),
   FOREIGN KEY (id_venta) REFERENCES VentaBoleto(id_venta),
   FOREIGN KEY (id_asiento) REFERENCES Asiento(id_asiento)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Historial de acciones
 CREATE TABLE Historial (
@@ -157,7 +172,8 @@ CREATE TABLE Historial (
   accion VARCHAR(50),
   FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),
   FOREIGN KEY (id_funcion) REFERENCES Funcion(id_funcion)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 
 INSERT INTO Cine (nombre, ubicacion, gerente) VALUES
